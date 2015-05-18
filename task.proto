@@ -1,0 +1,10 @@
+package pbnavitia;
+
+enum Action{
+    RELOAD = 0;
+    HEARTBEAT = 3;
+}
+
+message Task{
+    required Action action = 1;
+}
