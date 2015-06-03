@@ -16,6 +16,7 @@ message PTReferential {
     repeated JourneyPatternPoint journey_pattern_points = 12;
     repeated Company companies = 15;
     repeated Route routes = 23;
+    repeated LineGroup line_groups = 24;
 }
 
 message PathItem {
@@ -364,6 +365,7 @@ message Response{
     repeated Poi pois = 28;
     repeated PoiType poi_types = 29;
     repeated Calendar calendars = 55;
+    repeated LineGroup line_groups = 56;
 
     //Journeys
     repeated Journey journeys = 30;
