@@ -157,7 +157,6 @@ message Section {
     optional string id = 20;
     optional Co2Emission co2_emission = 21;
     repeated SectionAdditionalInformationType additional_informations = 22;
-    optional FeedPublisher feed_publisher = 23;
 }
 
 message Journey {
@@ -392,4 +391,5 @@ message Response{
 
     //Ptobject
     repeated PtObject pt_objects = 52;
+    repeated FeedPublisher feed_publishers = 53;
 }
