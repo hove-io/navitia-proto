@@ -123,6 +123,13 @@ enum SectionAdditionalInformationType {
     STAY_IN = 6;
 }
 
+message FeedPublisher{
+    required string id = 1;
+    optional string name = 2;
+    optional string url = 3;
+    optional string license = 4;
+}
+
 message Section {
     optional SectionType type = 1;
     optional PtObject origin = 2;
@@ -384,4 +391,5 @@ message Response{
 
     //Ptobject
     repeated PtObject pt_objects = 52;
+    repeated FeedPublisher feed_publishers = 53;
 }
