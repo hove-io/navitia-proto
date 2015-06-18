@@ -18,6 +18,7 @@ enum NavitiaType {
     POITYPE = 23;
     ADMINISTRATIVE_REGION = 22;
     CALENDAR = 25;
+    LINE_GROUP = 26;
 }
 
 
@@ -196,7 +197,7 @@ message MultiLineString {
     repeated LineString lines = 1;
     optional double length = 2;
 }
-	
+
 message Line {
     optional string name = 3;
     optional string uri = 4;
@@ -216,6 +217,15 @@ message Line {
     optional uint32 closing_time = 19;
 
     repeated Property properties = 21;
+    repeated LineGroup groups = 23;
+}
+
+message LineGroup {
+    optional string name = 1;
+    optional string uri = 2;
+    repeated Comment comments = 3;
+    repeated Line lines = 4;
+    optional Line main_line = 5;
 }
 
 message Route {
