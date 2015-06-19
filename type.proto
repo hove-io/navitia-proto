@@ -217,7 +217,7 @@ message Line {
     optional uint32 closing_time = 19;
 
     repeated Property properties = 21;
-    repeated LineGroup groups = 23;
+    repeated LineGroup line_groups = 23;
 }
 
 message LineGroup {
