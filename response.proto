@@ -232,6 +232,7 @@ message ScheduleStopTime {
     // Note: to define a null schedule time, time must be equal to it's max value (max uint64 value) 
     optional uint64 time = 3; //time is the number of seconds since midnight
     optional uint64 date = 4; //date is a posix time stamp to midnight
+    optional ResponseStatus dt_status = 5;
 }
 
 message RouteScheduleRow {
