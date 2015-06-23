@@ -218,6 +218,7 @@ message Status{
     optional string status = 13;
 
     optional string last_rt_data_loaded = 14;
+    optional bool is_open_data = 15;
 }
 
 message PairStopTime {
