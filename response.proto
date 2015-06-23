@@ -291,6 +291,8 @@ message Metadatas {
     required string status = 4;
     repeated string contributors = 12;
     optional string timezone = 13;
+    optional string name = 14;
+    optional string last_load_at = 15;
 }
 
 message Pagination {
