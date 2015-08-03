@@ -121,6 +121,9 @@ message PTRefRequest {
     optional OdtLevel odt_level         = 8;
     repeated string forbidden_uri       = 6;
     optional uint64 datetime            = 9;
+
+    optional uint64 since_datetime      = 10;
+    optional uint64 until_datetime      = 11;
 }
 
 message Request {
