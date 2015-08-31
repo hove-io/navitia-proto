@@ -76,6 +76,7 @@ message PtDisplayInfo {
     repeated Message messages = 13;
     repeated Disruption disruptions = 14;
     repeated Note notes = 15;
+    repeated string headsigns = 16;
 }
 
 message Uris {

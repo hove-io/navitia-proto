@@ -315,6 +315,7 @@ message StopTime {
     optional JourneyPatternPoint journey_pattern_point = 5;
     optional bool pickup_allowed = 6;
     optional bool drop_off_allowed = 7;
+    optional string headsign = 8;
 }
 
 message VehicleJourney {
