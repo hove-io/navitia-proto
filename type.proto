@@ -81,9 +81,20 @@ message Property {
 }
 
 message Channel {
+    enum ChannelType {
+        web = 1;
+        sms = 2;
+        email = 3;
+        mobile = 4;
+        notification = 5;
+        twitter = 6;
+        facebook = 7;
+        unknown_type = 8;
+    }
     optional string id = 1;
     optional string name = 2;
     optional string content_type = 3;
+    repeated ChannelType channel_types = 4;
 }
 
 message MessageContent {
