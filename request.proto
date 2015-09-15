@@ -65,6 +65,11 @@ message StreetNetworkParams{
     optional int32 max_car_duration_to_pt       = 16;
 }
 
+enum RTLevel {
+    THEORIC = 1;
+    ADAPTED = 2;
+    REAL_TIME = 3;
+}
 
 message JourneysRequest {
     repeated LocationContext origin                     = 1;
@@ -75,10 +80,11 @@ message JourneysRequest {
     required int32 max_duration                         = 6;
     required int32 max_transfers                        = 7;
     optional StreetNetworkParams streetnetwork_params   = 8;
-    required bool wheelchair                            = 9;
-    required bool disruption_active                     = 10;
+    optional bool wheelchair                            = 9      [default=false];
+    optional bool disruption_active                     = 10     [default=false];  // deprecated, to be removed
     optional bool show_codes                            = 11;
     optional bool details                               = 13;
+    optional RTLevel realtime_level                     = 14;
 }
 
 message PlacesNearbyRequest {
