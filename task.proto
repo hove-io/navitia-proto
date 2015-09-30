@@ -3,8 +3,15 @@ package pbnavitia;
 enum Action{
     RELOAD = 0;
     HEARTBEAT = 3;
+    LOAD_REALTIME = 4;
 }
 
 message Task{
     required Action action = 1;
+    optional LoadRealtime load_realtime = 2;
+}
+
+message LoadRealtime{
+    required string queue_name = 1;
+    repeated string contributors = 2;
 }
