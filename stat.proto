@@ -120,4 +120,7 @@ message StatJourneySection {
     optional string     to_admin_insee = 29;
 }
 
-
+message Pagination {
+    repeated StatRequest requests = 1;
+    required int32 items_on_page = 2;
+}
