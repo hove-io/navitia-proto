@@ -49,6 +49,7 @@ message StatRequest {
     optional JourneyRequest journey_request = 18;
     optional int32 end_point_id = 19;
     optional string end_point_name = 20;
+    optional StatResponse response = 21;
 }
 
 message JourneyRequest {
@@ -120,7 +121,6 @@ message StatJourneySection {
     optional string     to_admin_insee = 29;
 }
 
-message Pagination {
-    repeated StatRequest requests = 1;
-    required int32 items_on_page = 2;
+message StatResponse {
+    required int32 object_count = 1;
 }
