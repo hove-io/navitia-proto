@@ -137,6 +137,7 @@ message Disruption {
     optional string cause                           = 14;
     repeated MessageContent messages                = 15;
     optional Severity severity                      = 16;
+    optional string contributor                     = 17;
 }
 
 message GeographicalCoord {
