@@ -357,6 +357,12 @@ message VehicleJourney {
     repeated Comment comments = 27;
     repeated Code codes = 25;
     repeated Calendar calendars = 26;
+
+    optional Trip trip = 28;
+}
+
+message Trip{
+    optional string uri = 1;
 }
 
 message JourneyPatternPoint{
