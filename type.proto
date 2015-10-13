@@ -337,6 +337,7 @@ message VehicleJourney {
     repeated StopTime stop_times = 6;
     optional Route route = 7;
     optional JourneyPattern journey_pattern = 8;
+    optional Trip trip = 9;
 
     repeated Message messages = 10;
     repeated Disruption disruptions = 30;
@@ -357,8 +358,6 @@ message VehicleJourney {
     repeated Comment comments = 27;
     repeated Code codes = 25;
     repeated Calendar calendars = 26;
-
-    optional Trip trip = 28;
 }
 
 message Trip{
