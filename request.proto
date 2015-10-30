@@ -85,6 +85,7 @@ message JourneysRequest {
     optional bool show_codes                            = 11;
     optional bool details                               = 13;
     optional RTLevel realtime_level                     = 14;
+    optional int32 max_extra_second_pass                = 15     [default=0];
 }
 
 message PlacesNearbyRequest {
