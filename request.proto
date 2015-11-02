@@ -81,7 +81,6 @@ message JourneysRequest {
     required int32 max_transfers                        = 7;
     optional StreetNetworkParams streetnetwork_params   = 8;
     optional bool wheelchair                            = 9      [default=false];
-    optional bool disruption_active                     = 10     [default=false];  // deprecated, to be removed
     optional bool show_codes                            = 11;
     optional bool details                               = 13;
     optional RTLevel realtime_level                     = 14;
