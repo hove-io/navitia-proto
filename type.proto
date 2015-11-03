@@ -26,14 +26,12 @@ enum API {
     places = 1;
     PTREFERENTIAL = 2;
     PLANNER = 4;
-    LOAD_deprecated = 5;// [deprecated=true];
     places_nearby = 6;
     STATUS = 7;
     NEXT_DEPARTURES = 8;
     NEXT_ARRIVALS = 9;
     DEPARTURE_BOARDS = 10;
     ROUTE_SCHEDULES = 11;
-    STOPS_SCHEDULES_deprecated = 12;// [deprecated=true];
     ISOCHRONE = 13;
     METADATAS = 14;
     place_uri = 15;
