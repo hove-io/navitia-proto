@@ -228,6 +228,7 @@ message Line {
 
     repeated Property properties = 21;
     repeated LineGroup line_groups = 23;
+    optional string text_color = 24;
 }
 
 message LineGroup {
