@@ -408,4 +408,7 @@ message Response{
     //Ptobject
     repeated PtObject pt_objects = 52;
     repeated FeedPublisher feed_publishers = 53;
+    
+    // For api /disruptions
+    repeated Impact impacts = 54;   
 }
