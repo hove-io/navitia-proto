@@ -19,6 +19,7 @@ enum NavitiaType {
     ADMINISTRATIVE_REGION = 22;
     CALENDAR = 25;
     LINE_GROUP = 26;
+    IMPACT = 27;
 }
 
 
@@ -36,13 +37,14 @@ enum API {
     METADATAS = 14;
     place_uri = 15;
     UNKNOWN_API = 16;
-    disruptions = 17;
+    traffic_reports = 17;
     calendars = 18;
     NMPLANNER = 19;
     pt_objects = 20;
     place_code = 21;
     PREVIOUS_DEPARTURES = 23;
     PREVIOUS_ARRIVALS = 24;
+    disruptions = 25;
 }
 
 enum ResponseStatus{
@@ -125,7 +127,7 @@ message Severity {
     optional int32  priority                       = 4;
 }
 
-message Disruption {
+message Impact {
     optional string uri                             = 1;
     optional string disruption_uri                  = 2;
     repeated Period application_periods             = 10;
@@ -166,7 +168,7 @@ message StopArea {
     repeated AdministrativeRegion administrative_regions = 10;
     repeated StopPoint stop_points = 8;
     repeated Message messages = 9;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
     repeated Comment comments = 23;
     repeated Code codes = 12;
     optional string timezone = 15;
@@ -184,7 +186,7 @@ message StopPoint {
     optional hasEquipments has_equipments = 8;
 
     repeated Message messages = 9;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
     repeated Comment comments = 16;
     repeated Code codes = 12;
     optional Address address = 13;
@@ -219,7 +221,7 @@ message Line {
     optional Network network = 13;
 
     repeated Message messages = 14;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
     repeated Comment comments = 22;
     repeated Code codes = 16;
     optional MultiLineString geojson = 17;
@@ -245,7 +247,7 @@ message Route {
     optional Line line = 7;
     repeated JourneyPattern journey_patterns = 8;
     repeated Message messages = 9;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
     repeated Code codes = 10;
     repeated StopPoint stop_points = 1;
     optional PtObject direction = 12;
@@ -264,7 +266,7 @@ message JourneyPattern {
     repeated JourneyPatternPoint journey_pattern_points = 8;
 
     repeated Message messages = 9;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
 }
 
 message Destination{
@@ -338,7 +340,7 @@ message VehicleJourney {
     optional Trip trip = 9;
 
     repeated Message messages = 10;
-    repeated Disruption disruptions = 30;
+    repeated Impact impacts = 30;
 
     optional bool is_adapted = 11;
     optional ValidityPattern validity_pattern = 12;
@@ -369,7 +371,7 @@ message JourneyPatternPoint{
     optional JourneyPattern journey_pattern = 6;
 
     repeated Message messages = 7;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
 }
 
 message Contributor {
@@ -398,7 +400,7 @@ message Network {
     optional string name 		= 4;
     repeated Line lines 		= 5;
     repeated Message messages 	= 6;
-    repeated Disruption disruptions = 20;
+    repeated Impact impacts = 20;
     repeated Code codes         = 7;
 }
 
