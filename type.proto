@@ -168,7 +168,7 @@ message StopArea {
     repeated AdministrativeRegion administrative_regions = 10;
     repeated StopPoint stop_points = 8;
     repeated Message messages = 9;
-    repeated Impact impacts = 23;
+    repeated Impact impacts = 24;
     repeated Comment comments = 23;
     repeated Code codes = 12;
     optional string timezone = 15;
