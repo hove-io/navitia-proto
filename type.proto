@@ -221,7 +221,7 @@ message Line {
     optional Network network = 13;
 
     repeated Message messages = 14;
-    repeated Impact impacts = 24;
+    repeated Impact impacts = 25;
     repeated Comment comments = 22;
     repeated Code codes = 16;
     optional MultiLineString geojson = 17;
