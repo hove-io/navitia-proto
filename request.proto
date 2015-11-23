@@ -141,7 +141,7 @@ message Request {
     optional JourneysRequest journeys               = 5;
     optional PTRefRequest ptref                     = 6;
     optional PlaceUriRequest place_uri              = 7;
-    optional TrafficReportsRequest traffic_reports  = 8;
+    optional TrafficReportsRequest traffic_reports  = 13;
     optional CalendarsRequest calendars             = 9;
     optional PtobjectRequest pt_objects             = 10;
     optional PlaceCodeRequest place_code            = 11;

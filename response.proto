@@ -402,7 +402,7 @@ message Response{
     optional Pagination pagination = 49;
 
     //TrafficReports
-    repeated TrafficReports traffic_reports = 60;
+    repeated TrafficReports traffic_reports = 61;
 
     //Fare
     repeated Ticket tickets = 51;
