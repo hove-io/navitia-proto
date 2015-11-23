@@ -74,7 +74,7 @@ message PtDisplayInfo {
     optional hasEquipments has_equipments = 11;
     optional string name = 12;
     repeated Message messages = 13;
-    repeated Disruption disruptions = 14;
+    repeated Impact impacts = 17; 
     repeated Note notes = 15;
     repeated string headsigns = 16;
 }
@@ -344,7 +344,7 @@ message Error{
     optional string message = 2;
 }
 
-message Disruptions{
+message TrafficReports{
     optional Network network = 1;
     repeated Line lines = 2;
     repeated StopArea stop_areas = 3;   
@@ -381,6 +381,8 @@ message Response{
     repeated PoiType poi_types = 29;
     repeated Calendar calendars = 55;
     repeated LineGroup line_groups = 56;
+    // For api /disruptions
+    repeated Impact impacts = 57;   
 
     //Journeys
     repeated Journey journeys = 30;
@@ -400,8 +402,8 @@ message Response{
     optional Metadatas metadatas = 48;
     optional Pagination pagination = 49;
 
-    //Disruptions
-    repeated Disruptions disruptions = 60;
+    //TrafficReports
+    repeated TrafficReports traffic_reports = 61;
 
     //Fare
     repeated Ticket tickets = 51;
