@@ -37,7 +37,7 @@ enum API {
     METADATAS = 14;
     place_uri = 15;
     UNKNOWN_API = 16;
-    traffic_reports = 17;
+    traffic_reports = 26;
     calendars = 18;
     NMPLANNER = 19;
     pt_objects = 20;
