@@ -74,7 +74,7 @@ message PtDisplayInfo {
     optional hasEquipments has_equipments = 11;
     optional string name = 12;
     repeated Message messages = 13;
-    repeated Impact impacts = 14;
+    repeated Impact impacts = 17; 
     repeated Note notes = 15;
     repeated string headsigns = 16;
 }
@@ -380,6 +380,8 @@ message Response{
     repeated PoiType poi_types = 29;
     repeated Calendar calendars = 55;
     repeated LineGroup line_groups = 56;
+    // For api /disruptions
+    repeated Impact impacts = 57;   
 
     //Journeys
     repeated Journey journeys = 30;
@@ -408,7 +410,4 @@ message Response{
     //Ptobject
     repeated PtObject pt_objects = 52;
     repeated FeedPublisher feed_publishers = 53;
-    
-    // For api /disruptions
-    repeated Impact impacts = 54;   
 }
