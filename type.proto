@@ -255,6 +255,7 @@ message Route {
     optional MultiLineString geojson = 13;
     repeated PhysicalMode physical_modes = 14;
     repeated Comment comments = 15;
+    optional string direction_type = 17;
 }
 
 message JourneyPattern {
