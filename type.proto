@@ -380,6 +380,11 @@ message Contributor {
     optional string name = 2;
 }
 
+enum RTLevel {
+    BASE = 1;
+    ADAPTED = 2;
+    REAL_TIME = 3;
+}
 message PoiType {
     optional string uri = 1;
     optional string name = 2;

@@ -65,12 +65,6 @@ message StreetNetworkParams{
     optional int32 max_car_duration_to_pt       = 16;
 }
 
-enum RTLevel {
-    BASE = 1;
-    ADAPTED = 2;
-    REAL_TIME = 3;
-}
-
 message JourneysRequest {
     repeated LocationContext origin                     = 1;
     repeated LocationContext destination                = 2;
