@@ -390,8 +390,8 @@ enum RTLevel {
 message Frame {
     required string uri = 1;
     required Contributor contributor = 2;
-    required string start_validation_date = 3;
-    required string end_validation_date = 4;
+    required uint64 start_validation_date = 3;
+    required uint64 end_validation_date = 4;
     required RTLevel realtime_level = 5;
     optional string desc = 6;
     optional string system = 7;
