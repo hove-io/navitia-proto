@@ -85,7 +85,7 @@ message JourneysRequest {
     optional bool details                               = 13;
     optional RTLevel realtime_level                     = 14;
     optional int32 max_extra_second_pass                = 15     [default=0];
-    optional int32 walking_transfer_penalty             = 16     [default=2];
+    optional int32 walking_transfer_penalty             = 16     [default=120];
 }
 
 message PlacesNearbyRequest {
