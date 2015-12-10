@@ -136,11 +136,10 @@ enum StopTimeUpdateStatus {
 }
 
 message StopTimeUpdate {
-    optional StopTime stop_time                     = 1;
-    optional uint64 base_departure                  = 2;
-    optional uint64 base_arrival                    = 3;
-    optional string cause                           = 4;
-    optional StopTimeUpdateStatus effect            = 5;
+    optional StopTime amended_stop_time             = 1;
+    optional StopTime base_stop_time                = 2;
+    optional string cause                           = 3;
+    optional StopTimeUpdateStatus effect            = 4;
 }
 
 message ImpactedObject {
