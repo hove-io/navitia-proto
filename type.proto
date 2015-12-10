@@ -21,6 +21,7 @@ enum NavitiaType {
     LINE_GROUP = 26;
     IMPACT = 27;
     FRAME = 28;
+    TRIP = 29;
 }
 
 
@@ -128,6 +129,24 @@ message Severity {
     optional int32  priority                       = 4;
 }
 
+enum StopTimeUpdateStatus {
+    DELAYED = 0;
+    ADDED = 1;
+    DELETED = 2;
+}
+
+message StopTimeUpdate {
+    optional StopTime amended_stop_time             = 1;
+    optional StopTime base_stop_time                = 2;
+    optional string cause                           = 3;
+    optional StopTimeUpdateStatus effect            = 4;
+}
+
+message ImpactedObject {
+    optional PtObject pt_object                     = 1;
+    repeated StopTimeUpdate impacted_stops          = 2;
+}
+
 message Impact {
     optional string uri                             = 1;
     optional string disruption_uri                  = 2;
@@ -139,6 +158,7 @@ message Impact {
     repeated MessageContent messages                = 15;
     optional Severity severity                      = 16;
     optional string contributor                     = 17;
+    repeated ImpactedObject impacted_objects        = 18;
 }
 
 message GeographicalCoord {
@@ -363,7 +383,7 @@ message VehicleJourney {
     repeated Calendar calendars = 26;
 }
 
-message Trip{
+message Trip {
     optional string uri = 1;
 }
 
@@ -522,4 +542,5 @@ message PtObject {
     optional VehicleJourney vehicle_journey = 17;
     optional Calendar calendar = 18;
     optional int32 score = 19;	
+    optional Trip trip = 20;
 }
