@@ -347,7 +347,8 @@ message Error{
 message TrafficReports{
     optional Network network = 1;
     repeated Line lines = 2;
-    repeated StopArea stop_areas = 3;   
+    repeated StopArea stop_areas = 3;
+    repeated VehicleJourney vehicle_journeys = 4;
 }
 
 message Response{
