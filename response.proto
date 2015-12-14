@@ -2,23 +2,6 @@ import "type.proto";
 
 package pbnavitia;
 
-message PTReferential {
-    repeated ValidityPattern validity_patterns = 20;
-    repeated Line lines = 1;
-    repeated JourneyPattern journey_patterns = 2;
-    repeated VehicleJourney vehicle_journeys = 3;
-    repeated StopPoint stop_points = 4;
-    repeated StopArea stop_areas = 5;
-    repeated Network networks = 7;
-    repeated PhysicalMode physical_modes = 8;
-    repeated CommercialMode commercial_modes = 9;
-    repeated Connection connections = 11;
-    repeated JourneyPatternPoint journey_pattern_points = 12;
-    repeated Company companies = 15;
-    repeated Route routes = 23;
-    repeated LineGroup line_groups = 24;
-}
-
 message PathItem {
     optional string name = 1;
     optional double length = 2;
@@ -382,6 +365,7 @@ message Response{
     repeated PoiType poi_types = 29;
     repeated Calendar calendars = 55;
     repeated LineGroup line_groups = 56;
+    repeated Trip trips = 62;
     // For api /disruptions
     repeated Impact impacts = 57;   
 
