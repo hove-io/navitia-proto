@@ -140,6 +140,7 @@ message StopTimeUpdate {
     optional StopTime base_stop_time                = 2;
     optional string cause                           = 3;
     optional StopTimeUpdateStatus effect            = 4;
+    optional StopPoint stop_point                   = 5;
 }
 
 message ImpactedObject {
