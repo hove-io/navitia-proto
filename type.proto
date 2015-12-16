@@ -47,6 +47,8 @@ enum API {
     PREVIOUS_DEPARTURES = 23;
     PREVIOUS_ARRIVALS = 24;
     disruptions = 25;
+    nearest_stop_points = 27;
+    pt_planner = 28;
 }
 
 enum ResponseStatus{
@@ -542,6 +544,6 @@ message PtObject {
     optional Company company = 16;
     optional VehicleJourney vehicle_journey = 17;
     optional Calendar calendar = 18;
-    optional int32 score = 19;	
+    optional int32 score = 19;
     optional Trip trip = 20;
 }
