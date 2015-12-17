@@ -50,6 +50,12 @@ message StatRequest {
     optional int32 end_point_id = 19;
     optional string end_point_name = 20;
     optional StatInfoResponse info_response = 21;
+    optional StatBillingPlan billing_plan = 22;
+}
+
+message StatBillingPlan {
+    optional int32 max_request_count = 1;
+    optional int32 max_object_count = 2;
 }
 
 message JourneyRequest {
