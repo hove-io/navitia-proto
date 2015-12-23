@@ -96,7 +96,7 @@ message Fare {
 
 message Co2Emission {
     optional double value = 1;
-    optional string unit = 2;	
+    optional string unit = 2;
 }
 
 enum SectionAdditionalInformationType {
@@ -367,7 +367,7 @@ message Response{
     repeated LineGroup line_groups = 56;
     repeated Trip trips = 62;
     // For api /disruptions
-    repeated Impact impacts = 57;   
+    repeated Impact impacts = 57;
 
     //Journeys
     repeated Journey journeys = 30;
@@ -396,4 +396,12 @@ message Response{
     //Ptobject
     repeated PtObject pt_objects = 52;
     repeated FeedPublisher feed_publishers = 53;
+
+    //experimental
+    repeated NearestStopPoint nearest_stop_points = 63;
+}
+
+message NearestStopPoint{
+    optional StopPoint stop_point = 1;
+    optional int32 access_duration = 2;
 }

@@ -76,7 +76,7 @@ message JourneysRequest {
     optional StreetNetworkParams streetnetwork_params   = 8;
     optional bool wheelchair                            = 9      [default=false];
     optional bool show_codes                            = 11;
-    optional bool details                               = 13;
+    optional bool details                               = 13; //to be removed
     optional RTLevel realtime_level                     = 14;
     optional int32 max_extra_second_pass                = 15     [default=0];
     optional int32 walking_transfer_penalty             = 16     [default=120];
@@ -107,7 +107,7 @@ message PlaceCodeRequest {
         StopPoint = 6;
         Calendar = 7;
     }
-    required Type type= 1;
+    required Type type = 1;
     required string type_code = 2;
     required string code = 3;
 }
@@ -128,20 +128,34 @@ message PTRefRequest {
 }
 
 message Request {
-    required API requested_api                      = 1;
+    required API requested_api                           = 1;
 
-    optional PlacesRequest places                   = 2;
-    optional NextStopTimeRequest next_stop_times    = 3;
-    optional PlacesNearbyRequest places_nearby      = 4;
-    optional JourneysRequest journeys               = 5;
-    optional PTRefRequest ptref                     = 6;
-    optional PlaceUriRequest place_uri              = 7;
-    optional TrafficReportsRequest traffic_reports  = 13;
-    optional CalendarsRequest calendars             = 9;
-    optional PtobjectRequest pt_objects             = 10;
-    optional PlaceCodeRequest place_code            = 11;
+    optional PlacesRequest places                        = 2;
+    optional NextStopTimeRequest next_stop_times         = 3;
+    optional PlacesNearbyRequest places_nearby           = 4;
+    optional JourneysRequest journeys                    = 5;
+    optional PTRefRequest ptref                          = 6;
+    optional PlaceUriRequest place_uri                   = 7;
+    optional TrafficReportsRequest traffic_reports       = 13;
+    optional CalendarsRequest calendars                  = 9;
+    optional PtobjectRequest pt_objects                  = 10;
+    optional PlaceCodeRequest place_code                 = 11;
+    optional NearestStopPointsRequest nearest_stop_points = 14;
 
-    optional string request_id                      = 12;
+    optional string request_id                           = 12;
+}
+
+message NearestStopPointsRequest {
+    optional string place = 1;
+
+    optional string mode  = 2;
+    optional double walking_speed = 3;
+    optional double bike_speed = 4;
+    optional double car_speed = 5;
+    optional double bss_speed = 6;
+    optional string filter = 7;
+    optional int32 max_duration = 8;
+    optional bool reverse = 9;
 }
 
 
