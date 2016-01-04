@@ -50,8 +50,7 @@ message StatRequest {
     optional int32 end_point_id = 19;
     optional string end_point_name = 20;
     optional StatInfoResponse info_response = 21;
-    optional int32 token_id = 22;
-    optional string token = 23;
+    optional string token = 22;
 }
 
 message JourneyRequest {
