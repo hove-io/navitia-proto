@@ -366,6 +366,9 @@ message Response{
     repeated Calendar calendars = 55;
     repeated LineGroup line_groups = 56;
     repeated Trip trips = 62;
+    repeated Contributor contributors = 64;
+    repeated Frame frames = 65;
+
     // For api /disruptions
     repeated Impact impacts = 57;
 

@@ -14,6 +14,7 @@ enum NavitiaType {
     COMPANY = 11;
     ROUTE = 12;
     POI = 13;
+    CONTRIBUTOR = 16;
     ADDRESS = 18;
     POITYPE = 23;
     ADMINISTRATIVE_REGION = 22;
@@ -403,6 +404,8 @@ message JourneyPatternPoint{
 message Contributor {
     optional string uri = 1;
     optional string name = 2;
+    optional string website = 3;
+    optional string license = 4;
 }
 
 enum RTLevel {
