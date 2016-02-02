@@ -47,9 +47,10 @@ message NextStopTimeRequest {
     optional bool show_codes            = 14;
     optional uint64 until_datetime      = 15;
     optional uint64 _current_datetime   = 16;
+    optional RTLevel realtime_level     = 17;
 }
 
-message StreetNetworkParams{
+message StreetNetworkParams {
     optional string origin_mode                 = 1;
     optional string destination_mode            = 2;
     optional double walking_speed               = 3;
