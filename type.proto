@@ -388,7 +388,8 @@ message VehicleJourney {
 }
 
 message Trip {
-    optional string uri = 1;
+    optional string uri                     = 1;
+    optional string name                    = 2;
 }
 
 message JourneyPatternPoint{
