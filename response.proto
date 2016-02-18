@@ -230,6 +230,8 @@ message ScheduleStopTime {
     optional uint64 time = 3; //time is the number of seconds since midnight
     optional uint64 date = 4; //date is a posix time stamp to midnight
     optional ResponseStatus dt_status = 5;
+
+    optional RTLevel realtime_level = 6;
 }
 
 message RouteScheduleRow {
