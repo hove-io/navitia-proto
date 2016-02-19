@@ -414,7 +414,7 @@ message Contributor {
 enum RTLevel {
     BASE_SCHEDULE = 1;
     ADAPTED_SCHEDULE = 2;
-    REAL_TIME = 3;
+    REALTIME = 3;
 }
 
 message Frame {
