@@ -371,7 +371,7 @@ message Response{
     repeated LineGroup line_groups = 56;
     repeated Trip trips = 62;
     repeated Contributor contributors = 64;
-    repeated Frame frames = 65;
+    repeated DATASET datasets = 65;
 
     // For api /disruptions
     repeated Impact impacts = 57;
