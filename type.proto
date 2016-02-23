@@ -21,7 +21,7 @@ enum NavitiaType {
     CALENDAR = 25;
     LINE_GROUP = 26;
     IMPACT = 27;
-    FRAME = 28;
+    DATASET = 28;
     TRIP = 29;
 }
 
@@ -417,7 +417,7 @@ enum RTLevel {
     REALTIME = 3;
 }
 
-message Frame {
+message Dataset {
     required string uri = 1;
     required Contributor contributor = 2;
     required uint64 start_validation_date = 3;
