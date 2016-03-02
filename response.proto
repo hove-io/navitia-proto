@@ -260,7 +260,7 @@ message Passage {
     required StopDateTime stop_date_time = 1;
     required StopPoint stop_point = 2;
     optional PtDisplayInfo pt_display_informations = 3;
-    optional VehicleJourney vehicle_journey = 4;
+    optional Route route = 4;
 }
 
 message StopsSchedule {
