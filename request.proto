@@ -44,7 +44,7 @@ message NextStopTimeRequest {
     optional int32 max_date_times       = 11;
     repeated string forbidden_uri       = 12;
     optional string calendar            = 13;
-    optional bool show_codes            = 14;
+    optional bool show_codes            = 14; // to be removed
     optional uint64 until_datetime      = 15;
     optional uint64 _current_datetime   = 16;
     optional RTLevel realtime_level     = 17;
@@ -77,7 +77,7 @@ message JourneysRequest {
     required int32 max_transfers                        = 7;
     optional StreetNetworkParams streetnetwork_params   = 8;
     optional bool wheelchair                            = 9      [default=false];
-    optional bool show_codes                            = 11;
+    optional bool show_codes                            = 11; // to be removed
     optional bool details                               = 13; //to be removed
     optional RTLevel realtime_level                     = 14;
     optional int32 max_extra_second_pass                = 15     [default=0];
@@ -120,7 +120,7 @@ message PTRefRequest {
     required int32 depth                = 3;
     required int32 start_page           = 4;
     required int32 count                = 5;
-    optional bool show_codes            = 7;
+    optional bool show_codes            = 7; // to be removed
     optional OdtLevel odt_level         = 8;
     repeated string forbidden_uri       = 6;
     optional uint64 datetime            = 9;
