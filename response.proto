@@ -267,6 +267,12 @@ message StopsSchedule {
     repeated PairStopTime board_items = 1;
 }
 
+message RoutePoint {
+    optional Route route = 1;
+    optional StopPoint stop_point = 2;
+    optional PtDisplayInfo pt_display_informations = 3;
+}
+
 message BoardItem {
     required string hour =1;
     repeated string minutes = 2;
@@ -372,6 +378,7 @@ message Response{
     repeated Trip trips = 62;
     repeated Contributor contributors = 64;
     repeated Dataset datasets = 65;
+    repeated RoutePoint route_points = 66;
 
     // For api /disruptions
     repeated Impact impacts = 57;
