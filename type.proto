@@ -346,6 +346,9 @@ message StopDateTime {
     optional uint64 base_departure_date_time = 6;
     optional StopPoint stop_point = 3;
     optional Properties properties = 4;
+    optional RTLevel data_freshness = 7;
+    optional MessageStatus departure_status = 8;
+    optional MessageStatus arrival_status = 9;
 }
 
 
