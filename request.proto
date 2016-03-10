@@ -14,7 +14,7 @@ message CalendarsRequest {
 message TrafficReportsRequest {
     optional uint64 application_period_begin    = 8;
     optional uint64 application_period_end      = 9;
-    optional uint64 _current_datetime           = 10;
+    optional uint64 _current_datetime           = 10; // to be removed
     optional int32 depth                        = 3;
     optional int32 start_page                   = 4;
     optional int32 count                        = 5;
@@ -46,7 +46,7 @@ message NextStopTimeRequest {
     optional string calendar            = 13;
     optional bool show_codes            = 14; // to be removed
     optional uint64 until_datetime      = 15;
-    optional uint64 _current_datetime   = 16;
+    optional uint64 _current_datetime   = 16; // to be removed
     optional RTLevel realtime_level     = 17;
 }
 
@@ -123,7 +123,7 @@ message PTRefRequest {
     optional bool show_codes            = 7; // to be removed
     optional OdtLevel odt_level         = 8;
     repeated string forbidden_uri       = 6;
-    optional uint64 datetime            = 9;
+    optional uint64 datetime            = 9; // to be removed
 
     optional uint64 since_datetime      = 10;
     optional uint64 until_datetime      = 11;
@@ -143,6 +143,7 @@ message Request {
     optional PtobjectRequest pt_objects                  = 10;
     optional PlaceCodeRequest place_code                 = 11;
     optional NearestStopPointsRequest nearest_stop_points = 14;
+    optional uint64 _current_datetime   = 15;
 
     optional string request_id                           = 12;
 }
