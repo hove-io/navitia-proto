@@ -38,10 +38,10 @@ message NextStopTimeRequest {
     required int32 duration             = 4;
     required int32 depth                = 5;
     required int32 nb_stoptimes         = 7;
-    optional int32 interface_version    = 8;
+    optional int32 interface_version    = 8; // to be removed
     required int32 start_page           = 9;
     required int32 count                = 10;
-    optional int32 max_date_times       = 11;
+    optional int32 max_date_times       = 11; // to be removed
     repeated string forbidden_uri       = 12;
     optional string calendar            = 13;
     optional bool show_codes            = 14; // to be removed
