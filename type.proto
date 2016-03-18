@@ -193,7 +193,7 @@ message StopArea {
     repeated AdministrativeRegion administrative_regions = 10;
     repeated StopPoint stop_points = 8;
     repeated Message messages = 9;
-    repeated Impact impacts = 24;
+    repeated string impact_uris = 25;
     repeated Comment comments = 23;
     repeated Code codes = 12;
     optional string timezone = 15;
@@ -211,7 +211,7 @@ message StopPoint {
     optional hasEquipments has_equipments = 8;
 
     repeated Message messages = 9;
-    repeated Impact impacts = 21;
+    repeated string impact_uris = 22;
     repeated Comment comments = 16;
     repeated Code codes = 12;
     optional Address address = 13;
@@ -246,7 +246,7 @@ message Line {
     optional Network network = 13;
 
     repeated Message messages = 14;
-    repeated Impact impacts = 25;
+    repeated string impact_uris = 26;
     repeated Comment comments = 22;
     repeated Code codes = 16;
     optional MultiLineString geojson = 17;
@@ -273,7 +273,7 @@ message Route {
     optional Line line = 7;
     repeated JourneyPattern journey_patterns = 8;
     repeated Message messages = 9;
-    repeated Impact impacts = 16;
+    repeated string impact_uris = 18;
     repeated Code codes = 10;
     repeated StopPoint stop_points = 1;
     optional PtObject direction = 12;
@@ -293,7 +293,7 @@ message JourneyPattern {
     repeated JourneyPatternPoint journey_pattern_points = 8;
 
     repeated Message messages = 9;
-    repeated Impact impacts = 21;
+    repeated string impact_uris = 22;
 }
 
 message Destination{
@@ -372,7 +372,7 @@ message VehicleJourney {
     optional Trip trip = 9;
 
     repeated Message messages = 10;
-    repeated Impact impacts = 31;
+    repeated string impact_uris = 32;
 
     optional bool is_adapted = 11;
     optional ValidityPattern validity_pattern = 12;
@@ -404,7 +404,7 @@ message JourneyPatternPoint{
     optional JourneyPattern journey_pattern = 6;
 
     repeated Message messages = 7;
-    repeated Impact impacts = 21;
+    repeated string impact_uris = 22;
 }
 
 message Contributor {
@@ -451,7 +451,7 @@ message Network {
     optional string name 		= 4;
     repeated Line lines 		= 5;
     repeated Message messages 	= 6;
-    repeated Impact impacts     = 21;
+    repeated string impact_uris = 22;
     repeated Code codes         = 7;
 }
 
