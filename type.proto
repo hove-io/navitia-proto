@@ -218,6 +218,8 @@ message StopPoint {
     optional Address address = 13;
     optional string platform_code = 14;
     optional string label = 15;
+    repeated CommercialMode commercial_modes = 17;
+    repeated PhysicalMode physical_modes = 18;
 }
 
 enum OdtLevel{
