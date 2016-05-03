@@ -144,7 +144,8 @@ message Request {
     optional PtobjectRequest pt_objects                  = 10;
     optional PlaceCodeRequest place_code                 = 11;
     optional NearestStopPointsRequest nearest_stop_points = 14;
-    optional uint64 _current_datetime   = 15;
+    optional uint64 _current_datetime                    = 15;
+    optional GraphicalIsochronRequest isochron           = 16;
 
     optional string request_id                           = 12;
 }
@@ -160,6 +161,10 @@ message NearestStopPointsRequest {
     optional string filter = 7;
     optional int32 max_duration = 8;
     optional bool reverse = 9;
+}
+
+message GraphicalIsochronRequest {
+    optional JourneysRequest journeys_request = 1;
 }
 
 
