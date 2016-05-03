@@ -50,7 +50,7 @@ enum API {
     disruptions = 25;
     nearest_stop_points = 27;
     pt_planner = 28;
-    GRaphicalIsochron = 29;
+    graphical_isochron = 29;
 }
 
 enum ResponseStatus{
@@ -263,7 +263,8 @@ message Line {
 }
 
 message Polygon {
-    optional MultiLineString multi_lines = 1;
+    optional LineString outer = 1;
+    repeated LineString inners = 2;
 }
 
 message MultiPolygon {
