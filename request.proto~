@@ -1,4 +1,3 @@
-import "type.proto";
 package pbnavitia;
 
 message CalendarsRequest {
