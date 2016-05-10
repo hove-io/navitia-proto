@@ -50,6 +50,7 @@ enum API {
     disruptions = 25;
     nearest_stop_points = 27;
     pt_planner = 28;
+    graphical_isochron = 29;
 }
 
 enum ResponseStatus{
@@ -260,6 +261,16 @@ message Line {
     repeated LineGroup line_groups = 23;
     optional string text_color = 24;
 }
+
+message Polygon {
+    optional LineString outer = 1;
+    repeated LineString inners = 2;
+}
+
+message MultiPolygon {
+    repeated Polygon polygons = 1;
+}
+
 
 message LineGroup {
     optional string name = 1;

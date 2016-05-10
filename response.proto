@@ -362,6 +362,10 @@ message Link {
     optional string ressource_name     = 6; // name of the linked ressource. Used to create the full url link.
 }
 
+message GraphicalIsochron {
+    optional MultiPolygon geojson   = 1;
+}
+
 message Response{
     optional int32 status_code = 1;
     optional Error error = 2;
@@ -436,6 +440,10 @@ message Response{
     // some links computation is done in jormungandr but before json creation, so it is in the protobuf
     // even if it is not used in kraken
      repeated Link links = 67;
+     
+     //Isochron
+     repeated GraphicalIsochron graphical_isochrons = 68;
+     
 }
 
 message NearestStopPoint{
