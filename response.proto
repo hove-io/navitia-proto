@@ -57,9 +57,10 @@ message PtDisplayInfo {
     optional hasEquipments has_equipments = 11;
     optional string name = 12;
     repeated Message messages = 13;
-    repeated string impact_uris = 18; 
+    repeated string impact_uris = 18;
     repeated Note notes = 15;
     repeated string headsigns = 16;
+    optional string text_color = 17;
 }
 
 message Uris {
