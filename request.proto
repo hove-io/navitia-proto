@@ -165,6 +165,7 @@ message NearestStopPointsRequest {
 
 message GraphicalIsochronRequest {
     optional JourneysRequest journeys_request = 1;
+    required int32 min_duration               = 2;
 }
 
 
