@@ -50,7 +50,7 @@ enum API {
     disruptions = 25;
     nearest_stop_points = 27;
     pt_planner = 28;
-    graphical_isochron = 29;
+    graphical_isochrone = 29;
 }
 
 enum ResponseStatus{
