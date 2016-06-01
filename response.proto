@@ -364,7 +364,7 @@ message Link {
     optional string ressource_name     = 6; // name of the linked ressource. Used to create the full url link.
 }
 
-message GraphicalIsochron {
+message GraphicalIsochrone {
     optional MultiPolygon geojson   = 1;
 }
 
@@ -443,8 +443,8 @@ message Response{
     // even if it is not used in kraken
      repeated Link links = 67;
      
-     //Isochron
-     repeated GraphicalIsochron graphical_isochrons = 68;
+     //Isochrone
+     repeated GraphicalIsochrone graphical_isochrones = 68;
      
 }
 
