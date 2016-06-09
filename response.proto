@@ -365,7 +365,7 @@ message Link {
 }
 
 message GraphicalIsochrone {
-    optional MultiPolygon geojson   = 1;
+    optional string geojson = 1;
 }
 
 message Response{
