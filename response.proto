@@ -365,7 +365,11 @@ message Link {
 }
 
 message GraphicalIsochrone {
-    optional string geojson = 1;
+    optional string geojson       = 1;
+    optional int32 max_duration   = 2;
+    optional int32 min_duration   = 3;
+    optional PtObject origin      = 4;
+    optional PtObject destination = 5;
 }
 
 message Response{
