@@ -194,6 +194,16 @@ message Planner {
     optional string after = 4;
 }
 
+message GeoStatus{
+    optional string street_network_source = 1;
+    optional int32 nb_admins = 2;
+    optional int32 nb_admins_from_cities = 3;
+    optional int32 nb_ways = 4;
+    optional int32 nb_addresses = 5;
+    optional int32 nb_poi = 6;
+    optional string poi_source = 7;
+}
+
 message Status{
     required string publication_date = 1;
     required string start_production_date = 2;
@@ -449,7 +459,8 @@ message Response{
      
      //Isochrone
      repeated GraphicalIsochrone graphical_isochrones = 68;
-     
+
+     optional GeoStatus geo_status = 69;
 }
 
 message NearestStopPoint{

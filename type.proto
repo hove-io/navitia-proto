@@ -51,6 +51,7 @@ enum API {
     nearest_stop_points = 27;
     pt_planner = 28;
     graphical_isochrone = 29;
+    geo_status = 30;
 }
 
 enum ResponseStatus{
