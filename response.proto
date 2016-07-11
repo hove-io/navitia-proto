@@ -195,13 +195,13 @@ message Planner {
 }
 
 message GeoStatus{
-    optional string street_network_source = 1;
+    repeated string street_network_source = 1;
     optional int32 nb_admins = 2;
     optional int32 nb_admins_from_cities = 3;
     optional int32 nb_ways = 4;
     optional int32 nb_addresses = 5;
     optional int32 nb_poi = 6;
-    optional string poi_source = 7;
+    repeated string poi_source = 7;
 }
 
 message Status{
