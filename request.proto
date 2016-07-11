@@ -165,7 +165,7 @@ message NearestStopPointsRequest {
 
 message GraphicalIsochroneRequest {
     optional JourneysRequest journeys_request = 1;
-    repeated int32 duration                   = 4;
+    repeated int32 boundary_duration          = 4;
 }
 
 
