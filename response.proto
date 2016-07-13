@@ -461,6 +461,9 @@ message Response{
      repeated GraphicalIsochrone graphical_isochrones = 68;
 
      optional GeoStatus geo_status = 69;
+
+     // Car CO2 emission
+     optional Co2Emission car_co2_emission = 70;
 }
 
 message NearestStopPoint{

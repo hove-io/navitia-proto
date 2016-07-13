@@ -52,6 +52,7 @@ enum API {
     pt_planner = 28;
     graphical_isochrone = 29;
     geo_status = 30;
+    car_co2_emission = 31;
 }
 
 enum ResponseStatus{
