@@ -130,6 +130,11 @@ message PTRefRequest {
     optional uint64 until_datetime      = 11;
 }
 
+message CarCO2EmissionRequest {
+   optional LocationContext origin = 1;
+   optional LocationContext destination = 2;
+}
+
 message Request {
     required API requested_api                           = 1;
 
@@ -146,6 +151,7 @@ message Request {
     optional NearestStopPointsRequest nearest_stop_points = 14;
     optional uint64 _current_datetime                    = 15;
     optional GraphicalIsochroneRequest isochrone           = 16;
+    optional CarCO2EmissionRequest car_co2_emission      =17;
 
     optional string request_id                           = 12;
 }
