@@ -131,9 +131,9 @@ message PTRefRequest {
 }
 
 message CarCO2EmissionRequest {
-   required LocationContext origin = 1;
-   required LocationContext destination = 2;
-   required double estimation_coeff = 3;
+   optional LocationContext origin = 1;
+   optional LocationContext destination = 2;
+   optional double estimation_coeff = 3;
 }
 
 message Request {
