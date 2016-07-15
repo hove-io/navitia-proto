@@ -153,6 +153,7 @@ message Section {
 }
 
 message Journey {
+    //TODO: to be deleted after implemenation of durations
     optional int32 duration = 1;
     optional int32 nb_transfers = 2;
     optional uint64 departure_date_time = 3;
