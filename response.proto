@@ -100,6 +100,11 @@ message Co2Emission {
     optional string unit = 2;
 }
 
+message Durations {
+    optional int32 total = 1;
+    optional int32 walking = 2;
+}
+
 enum SectionAdditionalInformationType {
     ODT_WITH_ZONE = 1;
     ODT_WITH_STOP_POINT = 2;
@@ -148,6 +153,7 @@ message Section {
 }
 
 message Journey {
+    //TODO: to be deleted after implemenation of durations
     optional int32 duration = 1;
     optional int32 nb_transfers = 2;
     optional uint64 departure_date_time = 3;
@@ -172,6 +178,7 @@ message Journey {
     optional uint64 min_waiting_dur = 18;
     optional uint32 nb_vj_extentions = 19;
     optional uint32 nb_sections = 20;
+    optional Durations durations = 21;
 
 }
 
