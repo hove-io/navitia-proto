@@ -1,3 +1,4 @@
+syntax = "proto2";
 package pbnavitia;
 
 enum Action{
