@@ -55,6 +55,7 @@ enum API {
     geo_status = 30;
     car_co2_emission = 31;
     direct_path = 32;
+    heat_map = 33;
 }
 
 enum ResponseStatus{

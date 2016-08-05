@@ -391,6 +391,12 @@ message GraphicalIsochrone {
     optional PtObject destination = 5;
 }
 
+message HeatMap {
+    optional string matrix          = 1;
+    optional PtObject origin        = 2;
+    optional PtObject destination   = 3;
+}
+
 message Response{
     optional int32 status_code = 1;
     optional Error error = 2;
@@ -468,6 +474,9 @@ message Response{
      
      //Isochrone
      repeated GraphicalIsochrone graphical_isochrones = 68;
+
+     //Heat map
+     repeated HeatMap heat_maps = 71;
 
      optional GeoStatus geo_status = 69;
 
