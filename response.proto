@@ -392,9 +392,9 @@ message GraphicalIsochrone {
 }
 
 message HeatMap {
-    optional string matrix          = 1;
     optional PtObject origin        = 2;
     optional PtObject destination   = 3;
+    optional string heat_matrix     = 1;
 }
 
 message Response{
