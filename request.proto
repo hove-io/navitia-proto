@@ -162,6 +162,8 @@ message Request {
     optional GraphicalIsochroneRequest isochrone         = 16;
     optional CarCO2EmissionRequest car_co2_emission      = 17;
     optional DirectPathRequest direct_path               = 18;
+    optional HeatMapRequest heat_map                     = 19;
+
 
     optional string request_id                           = 12;
 }
@@ -181,7 +183,11 @@ message NearestStopPointsRequest {
 
 message GraphicalIsochroneRequest {
     optional JourneysRequest journeys_request = 1;
-    repeated int32 boundary_duration          = 4;
+    repeated int32 boundary_duration          = 2;
+}
+
+message HeatMapRequest {
+    optional JourneysRequest journeys_request = 1;
 }
 
 
