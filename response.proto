@@ -384,17 +384,21 @@ message Link {
 }
 
 message GraphicalIsochrone {
-    optional string geojson       = 1;
-    optional int32 max_duration   = 2;
-    optional int32 min_duration   = 3;
-    optional PtObject origin      = 4;
-    optional PtObject destination = 5;
+    optional string geojson             = 1;
+    optional int32 max_duration         = 2;
+    optional int32 min_duration         = 3;
+    optional PtObject origin            = 4;
+    optional PtObject destination       = 5;
+    optional uint64 requested_date_time = 6;
+    optional uint64 min_date_time       = 7;
+    optional uint64 max_date_time       = 8;
 }
 
 message HeatMap {
-    optional PtObject origin        = 2;
-    optional PtObject destination   = 3;
-    optional string heat_matrix     = 1;
+    optional string heat_matrix     	= 1;
+    optional PtObject origin            = 2;
+    optional PtObject destination       = 3;
+    optional uint64 requested_date_time = 4;
 }
 
 message StreetNetworkRoutingRow {

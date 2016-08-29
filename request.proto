@@ -195,6 +195,7 @@ message GraphicalIsochroneRequest {
 
 message HeatMapRequest {
     optional JourneysRequest journeys_request = 1;
+    optional int32 resolution                 = 2; 
 }
 
 
