@@ -144,6 +144,13 @@ message DirectPathRequest {
    optional StreetNetworkParams streetnetwork_params = 5;
 }
 
+message StreetNetworkRoutingMatrixRequest {
+   repeated LocationContext origins = 1;
+   repeated LocationContext destinations = 2;
+   optional string mode  = 3;
+   optional float speed = 4;
+   optional int32 max_duration = 5;
+}
 message Request {
     required API requested_api                           = 1;
 
@@ -163,7 +170,7 @@ message Request {
     optional CarCO2EmissionRequest car_co2_emission      = 17;
     optional DirectPathRequest direct_path               = 18;
     optional HeatMapRequest heat_map                     = 19;
-
+    optional StreetNetworkRoutingMatrixRequest sn_routing_matrix = 20;
 
     optional string request_id                           = 12;
 }

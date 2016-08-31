@@ -401,6 +401,13 @@ message HeatMap {
     optional uint64 requested_date_time = 4;
 }
 
+message StreetNetworkRoutingRow {
+    repeated int32 duration = 1;
+}
+
+message StreetNetworkRoutingMatrix {
+    repeated StreetNetworkRoutingRow rows = 1;
+}
 message Response{
     optional int32 status_code = 1;
     optional Error error = 2;
@@ -478,7 +485,6 @@ message Response{
      
      //Isochrone
      repeated GraphicalIsochrone graphical_isochrones = 68;
-
      //Heat map
      repeated HeatMap heat_maps = 71;
 
@@ -486,6 +492,8 @@ message Response{
 
      // Car CO2 emission
      optional Co2Emission car_co2_emission = 70;
+     
+     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
 }
 
 message NearestStopPoint{
