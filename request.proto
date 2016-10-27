@@ -50,6 +50,7 @@ message NextStopTimeRequest {
     optional uint64 _current_datetime   = 16; // to be removed
     optional RTLevel realtime_level     = 17;
     optional int32 items_per_schedule   = 18;
+    optional bool disable_geojson       = 19;
 }
 
 message StreetNetworkParams {
@@ -130,6 +131,8 @@ message PTRefRequest {
 
     optional uint64 since_datetime      = 10;
     optional uint64 until_datetime      = 11;
+
+    optional bool disable_geojson       = 12;
 }
 
 message CarCO2EmissionRequest {
@@ -201,11 +204,12 @@ message HeatMapRequest {
 
 
 message PtobjectRequest {
-    required string q           = 1;
-    repeated NavitiaType types  = 2;
-    required int32 depth        = 3;
-    required int32 count        = 4;
-    repeated string admin_uris  = 5;
-    optional int32 search_type  = 6;
+    required string q               = 1;
+    repeated NavitiaType types      = 2;
+    required int32 depth            = 3;
+    required int32 count            = 4;
+    repeated string admin_uris      = 5;
+    optional int32 search_type      = 6;
+    optional bool disable_geojson   = 7;
 }
 
