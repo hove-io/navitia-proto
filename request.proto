@@ -175,6 +175,7 @@ message Request {
     optional DirectPathRequest direct_path               = 18;
     optional HeatMapRequest heat_map                     = 19;
     optional StreetNetworkRoutingMatrixRequest sn_routing_matrix = 20;
+    optional ODTStopPointRequest odt_stop_point          = 21;
 
     optional string request_id                           = 12;
 }
@@ -213,3 +214,6 @@ message PtobjectRequest {
     optional bool disable_geojson   = 7;
 }
 
+message ODTStopPointRequest {
+	required GeographicalCoord coord = 1;
+}
