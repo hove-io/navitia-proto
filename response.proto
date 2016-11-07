@@ -481,29 +481,25 @@ message Response{
     // links
     // some links computation is done in jormungandr but before json creation, so it is in the protobuf
     // even if it is not used in kraken
-     repeated Link links = 67;
+    repeated Link links = 67;
      
-     //Isochrone
-     repeated GraphicalIsochrone graphical_isochrones = 68;
-     //Heat map
-     repeated HeatMap heat_maps = 71;
+    //Isochrone
+    repeated GraphicalIsochrone graphical_isochrones = 68;
+    //Heat map
+    repeated HeatMap heat_maps = 71;
 
-     optional GeoStatus geo_status = 69;
+    optional GeoStatus geo_status = 69;
 
-     // Car CO2 emission
-     optional Co2Emission car_co2_emission = 70;
+    // Car CO2 emission
+    optional Co2Emission car_co2_emission = 70;
 
-     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
+    optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
 
-     //experimental
-	 repeated ODTStopPoint odt_stop_points = 73;
+    //experimental
+    repeated StopPoint odt_stop_points = 73;
 }
 
 message NearestStopPoint{
     optional StopPoint stop_point = 1;
     optional int32 access_duration = 2;
-}
-
-message ODTStopPoint {
-	optional StopPoint stop_point = 1;
 }
