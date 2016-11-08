@@ -494,9 +494,6 @@ message Response{
     optional Co2Emission car_co2_emission = 70;
 
     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
-
-    //experimental
-    repeated StopPoint odt_stop_points = 73;
 }
 
 message NearestStopPoint{
