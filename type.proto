@@ -57,6 +57,7 @@ enum API {
     direct_path = 32;
     heat_map = 33;
     street_network_routing_matrix = 34;
+    odt_stop_points = 35;
 }
 
 enum ResponseStatus{
