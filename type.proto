@@ -546,6 +546,12 @@ message LocationContext {
     required int32 access_duration = 2;
 }
 
+enum DistanceStatus {
+    Reachable = 0;
+    Unreachable = 1;
+    Unknown = 3;
+}
+
 message PtObject {
     required string name = 1;
     required string uri = 2;
@@ -566,4 +572,5 @@ message PtObject {
     optional Calendar calendar = 18;
     optional int32 score = 19;
     optional Trip trip = 20;
+    required DistanceStatus distance_status = 21;
 }
