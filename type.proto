@@ -547,9 +547,9 @@ message LocationContext {
 }
 
 enum DistanceStatus {
-    Reachable = 0;
-    Unreachable = 1;
-    Unknown = 3;
+    reached = 0;
+    unreached = 1;
+    unknown = 3;
 }
 
 message PtObject {
