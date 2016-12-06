@@ -549,7 +549,7 @@ message LocationContext {
 enum DistanceStatus {
     reached = 0;
     unreached = 1;
-    unknown = 3;
+    unknown = 2;
 }
 
 message PtObject {
