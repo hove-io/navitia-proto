@@ -572,5 +572,5 @@ message PtObject {
     optional Calendar calendar = 18;
     optional int32 score = 19;
     optional Trip trip = 20;
-    required DistanceStatus distance_status = 21;
+    optional DistanceStatus distance_status = 21;
 }
