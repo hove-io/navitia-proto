@@ -188,6 +188,7 @@ message AdministrativeRegion {
     optional GeographicalCoord coord = 6;
     optional string label = 7;
     optional string insee = 8;
+    repeated StopArea main_stop_areas = 9;
 }
 
 message Comment {
