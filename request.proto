@@ -99,7 +99,8 @@ message PlacesNearbyRequest {
 }
 
 message PlaceUriRequest {
-    required string uri = 1;
+    required string uri  = 1;
+    optional int32 depth = 2    [default = 1];
 }
 
 message PlaceCodeRequest {
