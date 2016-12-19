@@ -410,7 +410,6 @@ enum RoutingStatus {
 message RoutingElement {
     required int32 duration = 1;
     required  RoutingStatus routing_status = 2;
-
 }
 
 message StreetNetworkRoutingRow {
