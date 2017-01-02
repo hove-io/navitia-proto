@@ -401,8 +401,19 @@ message HeatMap {
     optional uint64 requested_date_time = 4;
 }
 
+enum RoutingStatus {
+    reached = 0;
+    unreached = 1;
+    unknown = 2;
+}
+
+message RoutingElement {
+    required int32 duration = 1;
+    required  RoutingStatus routing_status = 2;
+}
+
 message StreetNetworkRoutingRow {
-    repeated int32 duration = 1;
+    repeated RoutingElement routing_response = 2;
 }
 
 message StreetNetworkRoutingMatrix {
