@@ -180,6 +180,7 @@ message Impact {
     optional Severity severity                      = 16;
     optional string contributor                     = 17;
     repeated ImpactedObject impacted_objects        = 18;
+    optional string category                        = 19;
 }
 
 message GeographicalCoord {
