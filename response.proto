@@ -37,6 +37,7 @@ enum SectionType {
     CROW_FLY = 10;
     PARK = 11;
     LEAVE_PARKING = 12;
+    ALIGHTING = 13;
 }
 
 enum TransferType {
