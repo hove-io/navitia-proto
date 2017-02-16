@@ -156,16 +156,16 @@ message StopTimeUpdate {
 }
 
 message LineSectionImpact {
-    optional StopArea from                          = 1;
-    optional StopArea to                            = 2;
+    optional PtObject from                          = 1;
+    optional PtObject to                            = 2;
     // for the moment we don't need the impacted routes, so we don't output them
 }
 
 
 message ImpactedObject {
-    optional PtObject pt_object                      = 1;
-    repeated StopTimeUpdate impacted_stops           = 2;
-    optional LineSectionImpact impacted_line_section = 3;
+    optional PtObject pt_object                     = 1;
+    repeated StopTimeUpdate impacted_stops          = 2;
+    optional LineSectionImpact impacted_section     = 3;
 }
 
 message Impact {
