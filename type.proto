@@ -479,13 +479,11 @@ message Network {
 message PhysicalMode {
     optional string uri = 3;
     optional string name = 4;
-    repeated CommercialMode commercial_modes = 5;
 }
 
 message CommercialMode {
     optional string uri = 3;
     optional string name = 4;
-    repeated PhysicalMode physical_modes = 5;
 }
 
 message Connection {
