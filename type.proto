@@ -143,6 +143,7 @@ enum StopTimeUpdateStatus {
     DELAYED = 0;
     ADDED = 1;
     DELETED = 2;
+    UNCHANGED = 3;
 }
 
 message StopTimeUpdate {
