@@ -158,6 +158,14 @@ message StreetNetworkRoutingMatrixRequest {
    optional float speed = 4;
    optional int32 max_duration = 5;
 }
+
+message MatchingRoute {
+    optional string line_uri = 1;
+    optional string start_stop_point_uri = 2;
+    optional string destination_code_key = 3;
+    optional string destination_code = 4;
+}
+
 message Request {
     required API requested_api                           = 1;
 
@@ -179,6 +187,7 @@ message Request {
     optional HeatMapRequest heat_map                     = 19;
     optional StreetNetworkRoutingMatrixRequest sn_routing_matrix = 20;
     optional GeographicalCoord coord                     = 21;
+    optional MatchingRoute matching_routes               = 23;
 
     optional string request_id                           = 12;
     optional bool disable_feedpublisher                  = 22;
@@ -206,7 +215,6 @@ message HeatMapRequest {
     optional JourneysRequest journeys_request = 1;
     optional int32 resolution                 = 2; 
 }
-
 
 message PtobjectRequest {
     required string q               = 1;
