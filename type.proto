@@ -57,6 +57,7 @@ enum API {
     street_network_routing_matrix = 34;
     odt_stop_points = 35;
     matching_routes = 36;
+    line_reports = 37;
 }
 
 enum ResponseStatus{

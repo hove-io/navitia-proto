@@ -368,6 +368,11 @@ message TrafficReports{
     repeated VehicleJourney vehicle_journeys = 4;
 }
 
+message LineReport {
+    optional Line line = 1;
+    repeated PtObject pt_objects = 2;
+}
+
 message LinkArgs {
     // it's uggly but since some link are computed with the protobuf, we need some dict-like
     // structure to compute the real link url later (it depends on the API version)
@@ -479,6 +484,7 @@ message Response{
 
     //TrafficReports
     repeated TrafficReports traffic_reports = 61;
+    repeated LineReport line_reports = 73;
 
     //Fare
     repeated Ticket tickets = 51;

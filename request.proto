@@ -23,6 +23,14 @@ message TrafficReportsRequest {
     repeated string forbidden_uris              = 7;
 }
 
+message LineReportsRequest {
+    optional int32 depth = 1;
+    optional int32 start_page = 2;
+    optional int32 count = 3;
+    optional string filter = 4;
+    repeated string forbidden_uris = 5;
+}
+
 message PlacesRequest {
     required string q           = 1;
     repeated NavitiaType types  = 2;
@@ -188,6 +196,7 @@ message Request {
     optional StreetNetworkRoutingMatrixRequest sn_routing_matrix = 20;
     optional GeographicalCoord coord                     = 21;
     optional MatchingRoute matching_routes               = 23;
+    optional LineReportsRequest line_reports             = 24;
 
     optional string request_id                           = 12;
     optional bool disable_feedpublisher                  = 22;
