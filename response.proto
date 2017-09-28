@@ -148,6 +148,7 @@ message Section {
     optional uint64 end_date_time = 17;
     optional uint64 base_begin_date_time = 25;
     optional uint64 base_end_date_time = 26;
+    optional RTLevel realtime_level = 27;
     optional int32 length = 19;
     optional string id = 20;
     optional Co2Emission co2_emission = 21;
@@ -239,11 +240,6 @@ message Status{
     repeated string rt_contributors = 18;
 }
 
-message PairStopTime {
-    required StopDateTime departure = 1;
-    required StopDateTime arrival = 2;
-}
-
 message ScheduleStopTime {
     optional Properties properties = 2;
     // date time is split because sometimes
@@ -254,6 +250,8 @@ message ScheduleStopTime {
     optional ResponseStatus dt_status = 5;
 
     optional RTLevel realtime_level = 6;
+    optional uint64 base_date_time = 7;
+    repeated string impact_uris = 8;
 }
 
 message RouteScheduleRow {
@@ -284,10 +282,6 @@ message Passage {
     required StopPoint stop_point = 2;
     optional PtDisplayInfo pt_display_informations = 3;
     optional Route route = 4;
-}
-
-message StopsSchedule {
-    repeated PairStopTime board_items = 1;
 }
 
 message RoutePoint {
@@ -471,7 +465,6 @@ message Response{
     optional string next = 33;
 
     //TimeTables
-    optional StopsSchedule stops_schedule = 34;
     repeated RouteSchedule route_schedules = 35;
     repeated DepartureBoard departure_boards = 36;
     repeated Passage next_departures = 37;
