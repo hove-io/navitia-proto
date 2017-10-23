@@ -104,6 +104,8 @@ message Channel {
         twitter = 6;
         facebook = 7;
         unknown_type = 8;
+        title = 9;
+        beacon = 10;
     }
     optional string id = 1;
     optional string name = 2;
