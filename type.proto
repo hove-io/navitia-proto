@@ -163,7 +163,7 @@ message StopTimeUpdate {
 message LineSectionImpact {
     optional PtObject from                          = 1;
     optional PtObject to                            = 2;
-    // for the moment we don't need the impacted routes, so we don't output them
+    repeated Route routes                           = 3;
 }
 
 
