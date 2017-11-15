@@ -173,6 +173,12 @@ message ImpactedObject {
     optional LineSectionImpact impacted_section     = 3;
 }
 
+message DisruptionProperty {
+    required string key                             = 1;
+    required string type                            = 2;
+    required string value                           = 3;
+}
+
 message Impact {
     optional string uri                             = 1;
     optional string disruption_uri                  = 2;
@@ -186,6 +192,7 @@ message Impact {
     optional string contributor                     = 17;
     repeated ImpactedObject impacted_objects        = 18;
     optional string category                        = 19;
+    repeated DisruptionProperty properties          = 20;
 }
 
 message GeographicalCoord {
