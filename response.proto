@@ -105,14 +105,14 @@ message Co2Emission {
 message Durations {
     optional int32 total = 1;
     optional int32 walking = 2;
-    optional int32 Bike = 3;
-    optional int32 Car = 4;
+    optional int32 bike = 3;
+    optional int32 car = 4;
 }
 
 message Distances {
     optional int32 walking = 1;
-    optional int32 Bike = 2;
-    optional int32 Car = 3;
+    optional int32 bike = 2;
+    optional int32 car = 3;
 }
 
 enum SectionAdditionalInformationType {
