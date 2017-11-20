@@ -190,7 +190,7 @@ message Journey {
     optional uint32 nb_vj_extentions = 19;
     optional uint32 nb_sections = 20;
     optional Durations durations = 21;
-    optional Distances distances = 21;
+    optional Distances distances = 22;
 }
 
 enum ResponseType {
