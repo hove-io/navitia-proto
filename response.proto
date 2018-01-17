@@ -15,6 +15,7 @@ enum StreetNetworkMode {
     Bike = 1;
     Car = 3;
     Bss = 4;
+    Ridesharing = 5;
 }
 
 message StreetNetwork {
@@ -38,6 +39,7 @@ enum SectionType {
     PARK = 11;
     LEAVE_PARKING = 12;
     ALIGHTING = 13;
+    RIDESHARING = 14;
 }
 
 enum TransferType {
@@ -107,12 +109,14 @@ message Durations {
     optional int32 walking = 2;
     optional int32 bike = 3;
     optional int32 car = 4;
+    optional int32 ridesharing = 5;
 }
 
 message Distances {
     optional int32 walking = 1;
     optional int32 bike = 2;
     optional int32 car = 3;
+    optional int32 ridesharing = 4;
 }
 
 enum SectionAdditionalInformationType {
@@ -122,6 +126,37 @@ enum SectionAdditionalInformationType {
     HAS_DATETIME_ESTIMATED = 4;
     REGULAR = 5;
     STAY_IN = 6;
+}
+
+enum GenderType {
+    FEMALE = 1;
+    MALE = 2;
+}
+
+message IndividualRating {
+    optional double value = 1;
+    optional uint32 count = 2;
+    optional double scale_min = 3;
+    optional double scale_max = 4 ;
+}
+
+message IndividualInformation {
+    optional string alias = 1;
+    optional string image = 2;
+    optional GenderType gender = 3;
+    optional IndividualRating rating = 4;
+}
+
+message SeatsDescription {
+    optional uint32 total = 1;
+    optional uint32 available = 2;
+}
+
+message RidesharingInformation {
+    optional string operator = 1;
+    optional string network = 2;
+    optional IndividualInformation driver = 3;
+    optional SeatsDescription seats = 4;
 }
 
 message FeedPublisher{
@@ -147,6 +182,12 @@ message Section {
 
 // Si c'est de l'attente
     optional TransferType transfer_type = 13;
+
+// If it is crowfly ridesharing (top-level)
+    repeated Journey ridesharing_journeys = 28;
+
+// If it is ridesharing section (low-level)
+    optional RidesharingInformation ridesharing_information = 29;
 
 // Dans tous les cas
     repeated GeographicalCoord shape = 24;
