@@ -152,11 +152,17 @@ message SeatsDescription {
     optional uint32 available = 2;
 }
 
+message ExternalLink{
+    optional string key = 1;
+    optional string href = 2;
+}
+
 message RidesharingInformation {
     optional string operator = 1;
     optional string network = 2;
     optional IndividualInformation driver = 3;
     optional SeatsDescription seats = 4;
+    repeated ExternalLink links = 5;
 }
 
 message FeedPublisher{
