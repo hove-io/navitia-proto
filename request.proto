@@ -78,6 +78,9 @@ message StreetNetworkParams {
     optional int32 max_bss_duration_to_pt       = 15;
     optional int32 max_car_duration_to_pt       = 16;
     optional bool enable_direct_path            = 17 [default=true];
+
+    optional double car_no_park_speed           = 18;
+    optional int32 max_car_no_park_duration_to_pt = 19;
 }
 
 message JourneysRequest {
@@ -215,6 +218,7 @@ message NearestStopPointsRequest {
     optional string filter = 7;
     optional int32 max_duration = 8;
     optional bool reverse = 9;
+    optional double car_no_park_speed = 10;
 }
 
 message GraphicalIsochroneRequest {

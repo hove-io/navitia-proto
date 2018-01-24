@@ -16,6 +16,7 @@ enum StreetNetworkMode {
     Car = 3;
     Bss = 4;
     Ridesharing = 5;
+    CarNoPark = 6;
 }
 
 message StreetNetwork {
