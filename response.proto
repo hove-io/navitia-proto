@@ -294,6 +294,7 @@ message Status{
     optional bool is_realtime_loaded = 16;
     optional string dataset_created_at = 17;
     repeated string rt_contributors = 18;
+    optional bool disruption_is_loaded = 19;
 }
 
 message ScheduleStopTime {
