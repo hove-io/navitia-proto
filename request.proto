@@ -101,6 +101,8 @@ message JourneysRequest {
     optional int32 direct_path_duration                 = 17;
     optional bool bike_in_pt                            = 18;
     repeated string allowed_id                          = 19;
+    optional int32 free_radius_from                     = 20 [default=0]; // meters
+    optional int32 free_radius_to                       = 21 [default=0]; // meters
 }
 
 message PlacesNearbyRequest {
@@ -228,7 +230,7 @@ message GraphicalIsochroneRequest {
 
 message HeatMapRequest {
     optional JourneysRequest journeys_request = 1;
-    optional int32 resolution                 = 2; 
+    optional int32 resolution                 = 2;
 }
 
 message PtobjectRequest {
