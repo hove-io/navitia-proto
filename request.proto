@@ -103,6 +103,7 @@ message JourneysRequest {
     repeated string allowed_id                          = 19;
     optional int32 free_radius_from                     = 20 [default=0]; // meters
     optional int32 free_radius_to                       = 21 [default=0]; // meters
+    optional int32 min_nb_journeys                      = 22;
 }
 
 message PlacesNearbyRequest {
