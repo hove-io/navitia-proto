@@ -563,6 +563,9 @@ message Response{
     optional Co2Emission car_co2_emission = 70;
 
     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
+
+    // Date time for creating the next kraken call
+    optional uint32 next_request_date_time = 73;
 }
 
 message NearestStopPoint{
