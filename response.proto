@@ -239,6 +239,7 @@ message Journey {
     optional uint32 nb_sections = 20;
     optional Durations durations = 21;
     optional Distances distances = 22;
+    optional uint32 next_request_date_time = 23; // Date time for creating the next
 }
 
 enum ResponseType {
