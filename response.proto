@@ -301,7 +301,7 @@ message ScheduleStopTime {
     optional Properties properties = 2;
     // date time is split because sometimes
     // we want only time and no dates for the schedule
-    // Note: to define a null schedule time, time must be equal to it's max value (max uint64 value) 
+    // Note: to define a null schedule time, time must be equal to it's max value (max uint64 value)
     optional uint64 time = 3; //time is the number of seconds since midnight
     optional uint64 date = 4; //date is a posix time stamp to midnight
     optional ResponseStatus dt_status = 5;
@@ -550,7 +550,7 @@ message Response{
     // some links computation is done in jormungandr but before json creation, so it is in the protobuf
     // even if it is not used in kraken
     repeated Link links = 67;
-     
+
     //Isochrone
     repeated GraphicalIsochrone graphical_isochrones = 68;
     //Heat map
@@ -562,6 +562,9 @@ message Response{
     optional Co2Emission car_co2_emission = 70;
 
     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
+
+    // Date time for creating the next kraken call
+    optional uint32 next_request_date_time = 73;
 }
 
 message NearestStopPoint{
