@@ -137,9 +137,20 @@ message Message {
 }
 
 message Severity {
+    enum Effect {
+        NO_SERVICE = 1;
+        REDUCED_SERVICE = 2;
+        SIGNIFICANT_DELAYS = 3;
+        DETOUR = 4;
+        ADDITIONAL_SERVICE = 5;
+        MODIFIED_SERVICE = 6;
+        OTHER_EFFECT = 7;
+        STOP_MOVED = 8;
+        UNKNOWN_EFFECT = 9;
+    }
     optional string name                           = 1;
     optional string color                          = 2;
-    optional string effect                         = 3;
+    optional Effect effect                         = 3 [default = UNKNOWN_EFFECT];
     optional int32  priority                       = 4;
 }
 
