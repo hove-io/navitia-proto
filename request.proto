@@ -104,8 +104,8 @@ message JourneysRequest {
     optional int32 free_radius_from                     = 20 [default=0]; // meters
     optional int32 free_radius_to                       = 21 [default=0]; // meters
     optional int32 min_nb_journeys                      = 22;
-    required double night_bus_filter_max_factor         = 23;
-    required int32 night_bus_filter_base_factor         = 24;
+    optional double night_bus_filter_max_factor         = 23;
+    optional int32 night_bus_filter_base_factor         = 24;
 }
 
 message PlacesNearbyRequest {
