@@ -137,9 +137,26 @@ message Message {
 }
 
 message Severity {
+    // copied from chaos-proto/gtfs-realtime.proto
+    enum Effect {
+        NO_SERVICE = 1;
+        REDUCED_SERVICE = 2;
+
+        // We don't care about INsignificant delays: they are hard to detect, have
+        // little impact on the user, and would clutter the results as they are too
+        // frequent.
+        SIGNIFICANT_DELAYS = 3;
+
+        DETOUR = 4;
+        ADDITIONAL_SERVICE = 5;
+        MODIFIED_SERVICE = 6;
+        OTHER_EFFECT = 7;
+        UNKNOWN_EFFECT = 8;
+        STOP_MOVED = 9;
+    }
     optional string name                           = 1;
     optional string color                          = 2;
-    optional string effect                         = 3;
+    optional Effect effect                         = 3 [default = UNKNOWN_EFFECT];
     optional int32  priority                       = 4;
 }
 

@@ -41,6 +41,7 @@ enum SectionType {
     LEAVE_PARKING = 12;
     ALIGHTING = 13;
     RIDESHARING = 14;
+    ON_DEMAND_TRANSPORT = 15;
 }
 
 enum TransferType {
