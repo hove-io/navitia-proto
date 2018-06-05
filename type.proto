@@ -609,5 +609,5 @@ message PtObject {
 }
 
 message FareZone {
-    required string name = 1;   
+    optional string name = 1;   
 }
