@@ -106,7 +106,7 @@ message JourneysRequest {
     optional int32 min_nb_journeys                      = 22;
     optional double night_bus_filter_max_factor         = 23 [default=1.5];
     optional int32 night_bus_filter_base_factor         = 24 [default=900]; // seconds
-    optional uint32 timeframe_end_datetime              = 25;
+    optional uint32 timeframe_duration                  = 25; // seconds
 }
 
 message PlacesNearbyRequest {
