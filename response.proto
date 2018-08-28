@@ -390,6 +390,8 @@ message StopSchedule {
     required StopPoint stop_point = 3;
     repeated ScheduleStopTime date_times = 4;
     optional ResponseStatus response_status = 5;
+    optional ScheduleStopTime first_datetime = 6;
+    optional ScheduleStopTime last_datetime = 7;
 }
 
 
