@@ -211,6 +211,7 @@ message Request {
 
     optional string request_id                           = 12;
     optional bool disable_feedpublisher                  = 22;
+    optional bool disable_disruption                     = 25 [default=false];
 }
 
 message NearestStopPointsRequest {
