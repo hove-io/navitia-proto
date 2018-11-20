@@ -40,6 +40,7 @@ message PlacesRequest {
     required int32 count        = 4;
     repeated string admin_uris  = 5;
     optional int32 search_type  = 6;
+    optional float main_stop_area_weight_factor = 7 [default=1.0];
 }
 
 message NextStopTimeRequest {
