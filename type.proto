@@ -165,6 +165,7 @@ enum StopTimeUpdateStatus {
     ADDED = 1;
     DELETED = 2;
     UNCHANGED = 3;
+    DETOUR = 4;
 }
 
 message StopTimeUpdate {
