@@ -175,6 +175,7 @@ message StopTimeUpdate {
     optional StopPoint stop_point                   = 5;
     optional StopTimeUpdateStatus departure_status  = 6;
     optional StopTimeUpdateStatus arrival_status    = 7;
+    optional bool is_detour                         = 8;
 }
 
 message LineSectionImpact {
