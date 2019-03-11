@@ -267,6 +267,8 @@ message StopPoint {
     repeated CommercialMode commercial_modes = 17;
     repeated PhysicalMode physical_modes = 18;
     optional FareZone fare_zone = 19;   
+    repeated EquipmentDetails equipment_details = 20;
+
 }
 
 enum OdtLevel{
@@ -605,7 +607,6 @@ message PtObject {
     optional int32 score = 19; // DEPRECATED
     optional Trip trip = 20;
     repeated int32 scores = 21;
-    repeated EquipmentDetails equipment_details = 22;
 }
 
 message FareZone {
