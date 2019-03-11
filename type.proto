@@ -26,7 +26,6 @@ enum NavitiaType {
     TRIP = 29;
 }
 
-
 enum API {
     places = 1;
     PTREFERENTIAL = 2;
@@ -61,17 +60,16 @@ enum API {
 }
 
 enum ResponseStatus{
-	none = 0;
-	no_departure_this_day = 1;
-	no_active_mode_this_day = 2;
-	no_active_circulation_this_day = 3;
-	terminus = 6;
-	date_out_of_bound = 7;
-	partial_terminus = 8;
-	ok = 9;
-	active_disruption = 10;
+    none = 0;
+    no_departure_this_day = 1;
+    no_active_mode_this_day = 2;
+    no_active_circulation_this_day = 3;
+    terminus = 6;
+    date_out_of_bound = 7;
+    partial_terminus = 8;
+    ok = 9;
+    active_disruption = 10;
 }
-
 
 message Code {
     required string type = 1;
@@ -272,10 +270,10 @@ message StopPoint {
 }
 
 enum OdtLevel{
-	scheduled = 0;
-	with_stops = 1;
-	zonal = 2;
-	all = 3;
+    scheduled = 0;
+    with_stops = 1;
+    zonal = 2;
+    all = 3;
 }
 
 message LineString {
@@ -501,9 +499,9 @@ message Poi {
 }
 
 message Network {
-    optional string uri 		= 3;
-    optional string name 		= 4;
-    repeated Message messages 	= 6;
+    optional string uri         = 3;
+    optional string name        = 4;
+    repeated Message messages   = 6;
     repeated string impact_uris = 22;
     repeated Code codes         = 7;
 }
@@ -607,8 +605,41 @@ message PtObject {
     optional int32 score = 19; // DEPRECATED
     optional Trip trip = 20;
     repeated int32 scores = 21;
+    repeated EquipmentDetails equipment_details = 22;
 }
 
 message FareZone {
     optional string name = 1;   
+}
+
+message EquipmentDetails {
+    enum EquipmentType {
+        escalator = 1;
+        elevator = 2;    
+    }
+    optional string id = 1;
+    optional string name = 2;
+    optional EquipmentType embedded_type = 3;
+    optional CurrentAvailability current_availability = 4;
+}
+
+message CurrentAvailability {
+    enum EquipmentStatus {
+        unknown = 0;
+        available = 1;
+        unavailable = 2;
+    }
+    optional EquipmentStatus status = 1;
+    repeated Period periods = 2;
+    optional string updated_at = 3;
+    optional Cause cause = 4;
+    optional Effect effect = 5;
+}
+
+message Cause {
+    optional string label = 1;
+}
+
+message Effect {
+    optional string label = 1;
 }
