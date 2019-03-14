@@ -633,14 +633,14 @@ message CurrentAvailability {
     optional EquipmentStatus status = 1;
     repeated Period periods = 2;
     optional string updated_at = 3;
-    optional Cause cause = 4;
-    optional Effect effect = 5;
+    optional EquipmentCause cause = 4;
+    optional EquipmentEffect effect = 5;
 }
 
-message Cause {
+message EquipmentCause {
     optional string label = 1;
 }
 
-message Effect {
+message EquipmentEffect {
     optional string label = 1;
 }
