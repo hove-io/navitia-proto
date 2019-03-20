@@ -214,7 +214,7 @@ message Request {
     optional bool disable_feedpublisher                  = 22;
     optional bool disable_disruption                     = 25 [default=false];
 
-    //after this date the request should be ignored as the caller will have timeout
+    //after this date the request should be ignored as the caller will have timeouted
     //the format of the date is: 20190101T120102,32910
     //a string is used to be able to store milliseconds
     optional string deadline                             = 26;
