@@ -253,3 +253,11 @@ message PtobjectRequest {
     optional int32 search_type      = 6;
     optional bool disable_geojson   = 7;
 }
+
+message EquipmentReportsRequest {
+    optional int32 depth            = 1;
+    optional int32 start_page       = 2;
+    optional int32 count            = 3;
+    optional string filter          = 4;
+    repeated string forbidden_uris  = 5;
+}

@@ -644,3 +644,8 @@ message EquipmentCause {
 message EquipmentEffect {
     optional string label = 1;
 }
+
+message StopAreaEquipment {
+    optional StopArea stop_area = 1;
+    repeated EquipmentDetails equipment_details = 2;
+}
