@@ -411,6 +411,7 @@ message Error{
         service_unavailable = 11;
         invalid_protobuf_request = 12;
         internal_error = 13;
+        deadline_expired = 14;
     }
     optional error_id id = 1;
     optional string message = 2;
