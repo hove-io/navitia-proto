@@ -113,6 +113,7 @@ message Durations {
     optional int32 bike = 3;
     optional int32 car = 4;
     optional int32 ridesharing = 5;
+    optional int32 taxi = 6;
 }
 
 message Distances {
@@ -120,6 +121,7 @@ message Distances {
     optional int32 bike = 2;
     optional int32 car = 3;
     optional int32 ridesharing = 4;
+    optional int32 taxi = 5;
 }
 
 enum SectionAdditionalInformationType {
