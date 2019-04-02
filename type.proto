@@ -57,6 +57,7 @@ enum API {
     odt_stop_points = 35;
     matching_routes = 36;
     line_reports = 37;
+    equipment_reports = 38;
 }
 
 enum ResponseStatus{

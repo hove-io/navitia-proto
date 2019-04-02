@@ -570,7 +570,7 @@ message Response{
     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
 
     // EquipmentReports
-    optional EquipmentReport equipment_reports = 74;
+    repeated EquipmentReport equipment_reports = 74;
 }
 
 message NearestStopPoint{

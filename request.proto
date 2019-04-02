@@ -218,6 +218,7 @@ message Request {
     //the format of the date is: 20190101T120102,32910
     //a string is used to be able to store milliseconds
     optional string deadline                             = 26;
+    optional EquipmentReportsRequest equipment_reports   = 27;
 }
 
 message NearestStopPointsRequest {
