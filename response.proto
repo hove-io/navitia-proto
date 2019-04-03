@@ -568,9 +568,17 @@ message Response{
     optional Co2Emission car_co2_emission = 70;
 
     optional StreetNetworkRoutingMatrix sn_routing_matrix = 72;
+
+    // EquipmentReports
+    repeated EquipmentReport equipment_reports = 74;
 }
 
 message NearestStopPoint{
     optional StopPoint stop_point = 1;
     optional int32 access_duration = 2;
+}
+
+message EquipmentReport {
+    optional Line line = 1;
+    repeated StopAreaEquipment stop_area_equipments = 2;
 }

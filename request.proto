@@ -218,6 +218,7 @@ message Request {
     //the format of the date is: 20190101T120102,32910
     //a string is used to be able to store milliseconds
     optional string deadline                             = 26;
+    optional EquipmentReportsRequest equipment_reports   = 27;
 }
 
 message NearestStopPointsRequest {
@@ -252,4 +253,12 @@ message PtobjectRequest {
     repeated string admin_uris      = 5;
     optional int32 search_type      = 6;
     optional bool disable_geojson   = 7;
+}
+
+message EquipmentReportsRequest {
+    optional int32 depth            = 1;
+    optional int32 start_page       = 2;
+    optional int32 count            = 3;
+    optional string filter          = 4;
+    repeated string forbidden_uris  = 5;
 }

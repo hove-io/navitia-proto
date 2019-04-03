@@ -57,6 +57,7 @@ enum API {
     odt_stop_points = 35;
     matching_routes = 36;
     line_reports = 37;
+    equipment_reports = 38;
 }
 
 enum ResponseStatus{
@@ -643,4 +644,9 @@ message EquipmentCause {
 
 message EquipmentEffect {
     optional string label = 1;
+}
+
+message StopAreaEquipment {
+    optional StopArea stop_area = 1;
+    repeated EquipmentDetails equipment_details = 2;
 }
