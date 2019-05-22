@@ -94,6 +94,7 @@ message Ticket {
     repeated string section_id = 4;
     optional bool found = 5;
     optional string comment = 6;
+    optional string source_id = 7;
 }
 
 message Fare {
