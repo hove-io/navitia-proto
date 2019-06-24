@@ -3,11 +3,19 @@ import "type.proto";
 
 package pbnavitia;
 
+enum CyclePathType {
+    NoCycleLane = 0;
+    SharedCycleWay = 1;    // Shared use lane (could be shared with pedestrians)
+    DedicatedCycleWay = 2; // Dedicated cycle lane
+    SeparatedCycleWay = 3; // A separate cycle lane (physical separation from the main carriageway
+}
+
 message PathItem {
     optional string name = 1;
     optional double length = 2;
     optional int32 direction = 3;
     optional double duration = 4;
+    optional CyclePathType cycle_path_type = 5;
 }
 
 enum StreetNetworkMode {
