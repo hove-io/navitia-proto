@@ -404,6 +404,7 @@ message StopDateTime {
     optional MessageStatus arrival_status = 9;
 }
 
+
 message StopTime {
     optional uint64 arrival_time = 1; // Local arrival
     optional uint64 utc_arrival_time = 10; // UTC arrival
