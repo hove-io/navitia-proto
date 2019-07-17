@@ -404,12 +404,6 @@ message StopDateTime {
     optional MessageStatus arrival_status = 9;
 }
 
-message FrequencyVehicleJourney {
-    optional uint64 start_time   = 1;
-    optional uint64 end_time     = 2;
-    optional uint64 headway_secs = 3;
-}
-
 message StopTime {
     optional uint64 arrival_time = 1; // Local arrival
     optional uint64 utc_arrival_time = 10; // UTC arrival
@@ -450,7 +444,9 @@ message VehicleJourney {
     repeated Comment comments = 27;
     repeated Code codes = 25;
     repeated Calendar calendars = 26;
-    optional FrequencyVehicleJourney frequency_vehicle_journey = 28;
+    optional uint64 start_time = 28;
+    optional uint64 end_time = 29;
+    optional uint64 headway_secs = 30;
 }
 
 message Trip {
