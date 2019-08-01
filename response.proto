@@ -199,6 +199,7 @@ message Section {
 
 // Si c'est du routier
     optional StreetNetwork street_network = 12;
+    optional int32 cycle_lane_length = 30;
 
 // Si c'est de l'attente
     optional TransferType transfer_type = 13;
