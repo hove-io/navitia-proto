@@ -357,6 +357,7 @@ message Destination{
 message Note{
     required string uri = 1;
     optional string note = 2;
+    optional string comment_type = 3;
 }
 
 message Properties{
