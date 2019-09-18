@@ -480,8 +480,9 @@ enum RTLevel {
 }
 
 enum DirectionType {
-    FORWARD = 1;
-    BACKWARD = 2;
+    ALL = 1;
+    FORWARD = 2;
+    BACKWARD = 3;
 }
 
 message Dataset {
