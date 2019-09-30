@@ -479,12 +479,6 @@ enum RTLevel {
     REALTIME = 3;
 }
 
-enum DirectionType {
-    ALL = 1;
-    FORWARD = 2;
-    BACKWARD = 3;
-}
-
 message Dataset {
     required string uri = 1;
     required Contributor contributor = 2;
