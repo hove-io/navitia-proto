@@ -109,6 +109,7 @@ message JourneysRequest {
     optional int32 night_bus_filter_base_factor         = 24 [default=900]; // seconds
     optional uint32 timeframe_duration                  = 25; // seconds
     optional int32 depth                                = 26 [default = 1];
+    optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
 }
 
 message PlacesNearbyRequest {

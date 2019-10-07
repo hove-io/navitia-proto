@@ -58,6 +58,7 @@ enum API {
     matching_routes = 36;
     line_reports = 37;
     equipment_reports = 38;
+    isochrone_distributed = 39;
 }
 
 enum ResponseStatus{
