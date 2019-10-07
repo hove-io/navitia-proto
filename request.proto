@@ -62,7 +62,6 @@ message NextStopTimeRequest {
     optional RTLevel realtime_level       = 17;
     optional int32 items_per_schedule     = 18;
     optional bool disable_geojson         = 19;
-    optional DirectionType direction_type = 20;
 }
 
 message StreetNetworkParams {
