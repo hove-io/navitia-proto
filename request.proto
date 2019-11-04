@@ -110,6 +110,7 @@ message JourneysRequest {
     optional uint32 timeframe_duration                  = 25; // seconds
     optional int32 depth                                = 26 [default = 1];
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
+    optional bool is_street_network_allowed_at_center   = 28 [default = true];
 }
 
 message PlacesNearbyRequest {
