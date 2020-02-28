@@ -584,7 +584,7 @@ message Response{
     // EquipmentReports
     repeated EquipmentReport equipment_reports = 74;
 
-    repeated DepartureBoard terminus_schedules = 75;
+    repeated StopSchedule terminus_schedules = 75;
 }
 
 message NearestStopPoint{
