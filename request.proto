@@ -182,6 +182,13 @@ message StreetNetworkRoutingMatrixRequest {
    optional int32 max_duration = 5;
 }
 
+message DistributedPlacesNearByRequest {
+    required string uri         = 1;
+    required double distance    = 2;
+    repeated NavitiaType types  = 3;
+    required int32 count        = 5;
+}
+
 message MatchingRoute {
     optional string line_uri = 1;
     optional string start_stop_point_uri = 2;
@@ -222,6 +229,8 @@ message Request {
     //a string is used to be able to store milliseconds
     optional string deadline                             = 26;
     optional EquipmentReportsRequest equipment_reports   = 27;
+
+    optional DistributedPlacesNearByRequest distributed_places_nearby = 28;
 }
 
 message NearestStopPointsRequest {

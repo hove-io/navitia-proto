@@ -59,6 +59,7 @@ enum API {
     line_reports = 37;
     equipment_reports = 38;
     terminus_schedules = 39;
+    distributed_places_nearby = 40;
 }
 
 enum ResponseStatus{
@@ -589,7 +590,9 @@ message ValidityPattern {
 
 message LocationContext {
     required string place = 1;
-    required int32 access_duration = 2;
+    required int32 access_duration = 2 [default = -1];
+    optional GeographicalCoord coord = 3;
+    optional int32 distance = 4;
 }
 
 message PtObject {

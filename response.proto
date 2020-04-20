@@ -585,6 +585,9 @@ message Response{
     repeated EquipmentReport equipment_reports = 74;
 
     repeated StopSchedule terminus_schedules = 75;
+
+    repeated LocationContext distributed_places_nearby = 76; // only used in distributed
+
 }
 
 message NearestStopPoint{
