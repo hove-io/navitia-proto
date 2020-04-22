@@ -613,6 +613,7 @@ message PtObject {
     optional int32 score = 19; // DEPRECATED
     optional Trip trip = 20;
     repeated int32 scores = 21;
+    repeated PtObject stop_points_nearby = 22;
 }
 
 message FareZone {
