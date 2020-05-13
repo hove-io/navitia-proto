@@ -76,6 +76,7 @@ message PtDisplayInfo {
     repeated Note notes = 15;
     repeated string headsigns = 16;
     optional string text_color = 17;
+    optional string trip_short_name = 19;
 }
 
 message Uris {
