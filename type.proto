@@ -450,6 +450,7 @@ message VehicleJourney {
     optional uint64 start_time = 28;
     optional uint64 end_time = 29;
     optional uint64 headway_secs = 30;
+    optional string headsign = 33;
 }
 
 message Trip {
