@@ -16,6 +16,9 @@ message PathItem {
     optional int32 direction = 3;
     optional double duration = 4;
     optional CyclePathType cycle_path_type = 5;
+    optional int32 id = 6;
+    optional GeographicalCoord coordinate = 7;
+    optional string instruction = 8;
 }
 
 enum StreetNetworkMode {
