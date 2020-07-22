@@ -121,6 +121,7 @@ message PlacesNearbyRequest {
     required int32 start_page                 = 6;
     optional string filter                    = 7;
     optional double stop_points_nearby_radius = 8;
+    repeated string forbidden_uris  	      = 9;
 }
 
 message PlaceUriRequest {
