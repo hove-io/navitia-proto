@@ -249,6 +249,7 @@ message StopArea {
     optional string label = 16;
     repeated CommercialMode commercial_modes = 21;
     repeated PhysicalMode physical_modes = 22;
+    repeated Line lines = 24;
 }
 
 message StopPoint {
