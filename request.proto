@@ -259,6 +259,7 @@ message PtobjectRequest {
     repeated string admin_uris      = 5;
     optional int32 search_type      = 6;
     optional bool disable_geojson   = 7;
+    optional string filter          = 8;
 }
 
 message EquipmentReportsRequest {
