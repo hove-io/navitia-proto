@@ -592,6 +592,8 @@ message ValidityPattern {
 message LocationContext {
     required string place = 1;
     required int32 access_duration = 2;
+    optional float lon = 3;
+    optional float lat = 4;
 }
 
 message PtObject {
