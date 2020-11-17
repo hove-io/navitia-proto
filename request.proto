@@ -83,7 +83,7 @@ message StreetNetworkParams {
     optional double car_no_park_speed           = 18;
     optional int32 max_car_no_park_duration_to_pt = 19;
     optional string language                      = 20 [default="en-US"];
-    optional bool enable_instructions  = 21 [default=true];
+    optional bool enable_instructions             = 21 [default=true];
 }
 
 message JourneysRequest {
