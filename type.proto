@@ -205,7 +205,7 @@ message TimeSlot {
 
 message ApplicationPattern {
     required WeekPattern week_pattern               = 1;
-    required Period active_periods                  = 2;
+    required Period application_period              = 2;
     repeated TimeSlot time_slots                    = 3;
 }
 
@@ -673,3 +673,4 @@ message StopAreaEquipment {
     optional StopArea stop_area = 1;
     repeated EquipmentDetails equipment_details = 2;
 }
+
