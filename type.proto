@@ -197,6 +197,18 @@ message DisruptionProperty {
     required string value                           = 3;
 }
 
+message TimeSlot {
+    // Times in local for a timeslot
+    required uint32 begin                           = 1;
+    required uint32 end                             = 2;
+}
+
+message ApplicationPattern {
+    required WeekPattern week_pattern               = 1;
+    required Period application_period              = 2;
+    repeated TimeSlot time_slots                    = 3;
+}
+
 message Impact {
     optional string uri                             = 1;
     optional string disruption_uri                  = 2;
@@ -211,6 +223,7 @@ message Impact {
     repeated ImpactedObject impacted_objects        = 18;
     optional string category                        = 19;
     repeated DisruptionProperty properties          = 20;
+    repeated ApplicationPattern application_patterns = 21;
 }
 
 message GeographicalCoord {
@@ -660,3 +673,4 @@ message StopAreaEquipment {
     optional StopArea stop_area = 1;
     repeated EquipmentDetails equipment_details = 2;
 }
+
