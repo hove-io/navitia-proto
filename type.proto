@@ -73,6 +73,32 @@ enum ResponseStatus{
     active_disruption = 10;
 }
 
+enum FreeFloatingType {
+    BIKE = 1;
+    SCOOTER = 2;
+    MOTORSCOOTER = 3;
+    STATION = 4;
+    CAR = 5;
+    OTHER = 6;
+}
+
+enum FreeFloatingAttributeType {
+    GEARS = 1;
+    ELECTRIC = 2;
+    CHILD_SEAT = 3;
+    CARGO = 4;
+    TANDEM = 5;
+}
+
+enum FreeFloatingPropulsionType {
+    // Error typo in https://flow.fluctuo.com/api/Enum/PropulsionType
+    HUMAIN = 1;
+    ASSIST = 2;
+    ELECTRIC = 3;
+    HYBRID = 4;
+    COMBUSTION = 5;
+}
+
 message Code {
     required string type = 1;
     required string value = 2;
@@ -674,3 +700,14 @@ message StopAreaEquipment {
     repeated EquipmentDetails equipment_details = 2;
 }
 
+message FreeFloating {
+    required string id = 1;
+    optional string public_id = 2;
+    optional string provider_name = 3;
+    optional FreeFloatingType type = 4;
+    repeated FreeFloatingAttributeType attributes = 5;
+    optional FreeFloatingPropulsionType propulsion = 6;
+    optional GeographicalCoord coord = 7;
+    optional int32 battery = 8;
+    optional string deeplink = 9;
+}

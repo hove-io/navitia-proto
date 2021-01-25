@@ -589,6 +589,8 @@ message Response{
     repeated EquipmentReport equipment_reports = 74;
 
     repeated StopSchedule terminus_schedules = 75;
+
+    repeated FreeFloating free_floatings = 76;
 }
 
 message NearestStopPoint{
