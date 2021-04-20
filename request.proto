@@ -86,9 +86,9 @@ message StreetNetworkParams {
     optional bool enable_instructions             = 21 [default=true];
 
     // bike share
-    optional float bss_rent_cost                  = 22 [default=120];
+    optional float bss_rent_duration              = 22 [default=120];
     optional float bss_rent_penalty               = 23 [default=0];
-    optional float bss_return_cost                = 24 [default=120];
+    optional float bss_return_duration            = 24 [default=120];
     optional float bss_return_penalty             = 25 [default=0];
 }
 
