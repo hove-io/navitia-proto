@@ -118,6 +118,7 @@ message JourneysRequest {
     optional uint32 timeframe_duration                  = 25; // seconds
     optional int32 depth                                = 26 [default = 1];
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
+    optional int32 arrival_transfer_penalty             = 28 [default=120]; // seconds
 }
 
 message PlacesNearbyRequest {
