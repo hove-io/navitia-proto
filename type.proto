@@ -184,11 +184,17 @@ message LineSectionImpact {
     repeated Route routes                           = 3;
 }
 
+message RailSectionImpact {
+    optional PtObject from                          = 1;
+    optional PtObject to                            = 2;
+    repeated Route routes                           = 3;
+}
 
 message ImpactedObject {
-    optional PtObject pt_object                     = 1;
-    repeated StopTimeUpdate impacted_stops          = 2;
-    optional LineSectionImpact impacted_section     = 3;
+    optional PtObject pt_object                         = 1;
+    repeated StopTimeUpdate impacted_stops              = 2;
+    optional LineSectionImpact impacted_section         = 3;
+    optional RailSectionImpact impacted_rail_section    = 4;
 }
 
 message DisruptionProperty {
