@@ -19,6 +19,7 @@ message PathItem {
     optional int32 id = 6;
     optional GeographicalCoord coordinate = 7;
     optional string instruction = 8;
+    optional GeographicalCoord instruction_start_coordinates = 9;
 }
 
 enum StreetNetworkMode {
