@@ -38,6 +38,7 @@ message StreetNetwork {
     optional StreetNetworkMode mode = 3;
     repeated PathItem path_items = 4;
     repeated GeographicalCoord coordinates = 5;
+    repeated Elevation elevations = 6;
 }
 
 enum SectionType {

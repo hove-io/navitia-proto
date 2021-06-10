@@ -680,3 +680,7 @@ message StopAreaEquipment {
     repeated EquipmentDetails equipment_details = 2;
 }
 
+message Elevation {
+    required int32 distance_from_start = 1;
+    required float elevation = 2;
+}
