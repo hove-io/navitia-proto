@@ -31,6 +31,7 @@ message LineReportsRequest {
     repeated string forbidden_uris = 5;
     optional uint64 since_datetime = 6;
     optional uint64 until_datetime = 7;
+    repeated ActiveStatus filter_status = 8;
 }
 
 message PlacesRequest {
