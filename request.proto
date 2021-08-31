@@ -193,6 +193,10 @@ message StreetNetworkRoutingMatrixRequest {
    optional float speed = 4;
    optional int32 max_duration = 5;
    optional StreetNetworkParams streetnetwork_params = 6;
+   optional float asgard_max_walking_duration_coeff  = 7 [default=1];
+   optional float asgard_max_bike_duration_coeff     = 8 [default=1];
+   optional float asgard_max_bss_duration_coeff      = 9 [default=1];
+   optional float asgard_max_car_duration_coeff      = 10 [default=1];
 }
 
 message MatchingRoute {
