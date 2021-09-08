@@ -59,6 +59,7 @@ enum API {
     line_reports = 37;
     equipment_reports = 38;
     terminus_schedules = 39;
+    vehicle_positions = 40;
 }
 
 enum ResponseStatus{
@@ -684,3 +685,13 @@ message Elevation {
     required int32 distance_from_start = 1;
     required float elevation = 2;
 }
+
+message VehicleJourneyPosition {
+    optional VehicleJourney vehicle_journey = 1;
+    // for jormungandr only
+    optional GeographicalCoord coord = 2;
+    optional float speed = 3;
+    optional float bearing = 4;
+    optional RTLevel data_freshness = 5;
+}
+
