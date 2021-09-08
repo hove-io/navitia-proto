@@ -291,5 +291,4 @@ message VehiclePositionsRequest {
     optional int32 count            	= 3;
     optional string filter          	= 4;
     repeated string forbidden_uris  	= 5;
-    optional uint64 _current_datetime	= 6;
 }
