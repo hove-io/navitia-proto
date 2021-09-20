@@ -239,6 +239,7 @@ message Request {
     //a string is used to be able to store milliseconds
     optional string deadline                             = 26;
     optional EquipmentReportsRequest equipment_reports   = 27;
+    optional VehiclePositionsRequest vehicle_positions   = 28;
 }
 
 message NearestStopPointsRequest {
@@ -282,4 +283,12 @@ message EquipmentReportsRequest {
     optional int32 count            = 3;
     optional string filter          = 4;
     repeated string forbidden_uris  = 5;
+}
+
+message VehiclePositionsRequest {
+    optional int32 depth            	= 1;
+    optional int32 start_page       	= 2;
+    optional int32 count            	= 3;
+    optional string filter          	= 4;
+    repeated string forbidden_uris  	= 5;
 }

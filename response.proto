@@ -593,6 +593,8 @@ message Response{
     repeated EquipmentReport equipment_reports = 74;
 
     repeated StopSchedule terminus_schedules = 75;
+
+    repeated VehiclePosition vehicle_positions = 76;
 }
 
 message NearestStopPoint{
@@ -603,4 +605,10 @@ message NearestStopPoint{
 message EquipmentReport {
     optional Line line = 1;
     repeated StopAreaEquipment stop_area_equipments = 2;
+}
+
+
+message VehiclePosition {
+    optional Line line = 1;
+    repeated VehicleJourneyPosition vehicle_journey_positions = 2;
 }
