@@ -394,6 +394,7 @@ message Properties{
     repeated CalendarException exceptions = 6;
     optional Destination destination = 7;
     optional string vehicle_journey_id = 8;
+    repeated Code vehicle_journey_codes = 9;
 }
 
 message hasEquipments{
