@@ -685,6 +685,7 @@ message StopAreaEquipment {
 message Elevation {
     required int32 distance_from_start = 1;
     required float elevation = 2;
+    optional int32 geojson_index = 3;
 }
 
 message VehicleJourneyPosition {
