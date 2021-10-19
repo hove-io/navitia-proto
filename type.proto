@@ -388,6 +388,7 @@ message Properties{
         drop_off_only = 2;
         on_demand_transport = 3;
         date_time_estimated = 4;
+        skipped_stop = 5;
     }
     repeated AdditionalInformation additional_informations= 1;
     repeated Note notes = 5;
