@@ -272,6 +272,23 @@ message StopArea {
     repeated Line lines = 24;
 }
 
+message AccessPoint {
+    optional string name                   = 1;
+    optional string uri                    = 2;
+    optional GeographicalCoord coord       = 3;
+    optional bool is_entrance              = 4;
+    optional bool is_exit                  = 5;
+    optional int32 pathway_mode            = 6;
+    optional int32 length                  = 7;
+    optional int32 traversal_time          = 8;
+    optional int32 stair_count             = 9;
+    optional int32 max_slope               = 10;
+    optional int32 min_width               = 11;
+    optional string signposted_as          = 12;
+    optional string reversed_signposted_as = 13;
+    optional StopArea parent_station       = 14;
+}
+
 message StopPoint {
     optional string name = 3;
     repeated AdministrativeRegion administrative_regions = 10;
@@ -292,6 +309,7 @@ message StopPoint {
     optional FareZone fare_zone = 19;   
     repeated EquipmentDetails equipment_details = 20;
     repeated Line lines = 23;
+    repeated AccessPoint access_points = 24;
 }
 
 enum OdtLevel{
