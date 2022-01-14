@@ -232,7 +232,8 @@ message Section {
     repeated SectionAdditionalInformationType additional_informations = 22;
     
     // via which Entrance/Exit
-    optional PtObject via = 23;
+    optional PtObject via_entrance = 31;
+    optional PtObject via_exit = 32;
 }
 
 message Journey {
