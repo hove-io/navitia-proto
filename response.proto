@@ -20,6 +20,7 @@ message PathItem {
     optional GeographicalCoord coordinate = 7;
     optional string instruction = 8;
     optional GeographicalCoord instruction_start_coordinate = 9;
+    optional string via_uri = 10;
 }
 
 enum StreetNetworkMode {
@@ -232,8 +233,7 @@ message Section {
     repeated SectionAdditionalInformationType additional_informations = 22;
     
     // via which Entrance/Exit
-    optional PtObject via_entrance = 31;
-    optional PtObject via_exit = 32;
+    repeated PtObject vias = 31;
 }
 
 message Journey {
