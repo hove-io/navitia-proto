@@ -24,6 +24,7 @@ enum NavitiaType {
     IMPACT = 27;
     DATASET = 28;
     TRIP = 29;
+    ACCESS_POINT = 30;
 }
 
 enum API {
@@ -659,6 +660,7 @@ message PtObject {
     optional Trip trip = 20;
     repeated int32 scores = 21;
     repeated PtObject stop_points_nearby = 22;
+    optional AccessPoint access_point = 23;
 }
 
 message FareZone {
