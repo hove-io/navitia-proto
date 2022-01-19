@@ -233,7 +233,7 @@ message Section {
     repeated SectionAdditionalInformationType additional_informations = 22;
     
     // via which Entrance/Exit
-    repeated PtObject vias = 31;
+    repeated AccessPoint vias = 31;
 }
 
 message Journey {
