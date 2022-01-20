@@ -61,6 +61,7 @@ enum API {
     equipment_reports = 38;
     terminus_schedules = 39;
     vehicle_positions = 40;
+    access_points = 41;
 }
 
 enum ResponseStatus{
