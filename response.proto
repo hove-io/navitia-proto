@@ -599,6 +599,8 @@ message Response{
     repeated StopSchedule terminus_schedules = 75;
 
     repeated VehiclePosition vehicle_positions = 76;
+
+    repeated AccessPoint access_points = 77;
 }
 
 message NearestStopPoint{
