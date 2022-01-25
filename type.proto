@@ -289,6 +289,7 @@ message AccessPoint {
     optional string signposted_as          = 12;
     optional string reversed_signposted_as = 13;
     optional StopArea parent_station       = 14;
+    optional string stop_code              = 15;
 }
 
 message StopPoint {
