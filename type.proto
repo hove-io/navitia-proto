@@ -719,5 +719,7 @@ message VehicleJourneyPosition {
     optional float speed = 3;
     optional float bearing = 4;
     optional RTLevel data_freshness = 5;
+    optional string occupancy = 6;
+    optional uint64 feed_created_at = 7;
 }
 
