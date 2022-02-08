@@ -601,6 +601,9 @@ message Response{
     repeated VehiclePosition vehicle_positions = 76;
 
     repeated AccessPoint access_points = 77;
+
+    // Terminus for all vehicle_journeys in journeys api
+    repeated StopArea terminus = 78;
 }
 
 message NearestStopPoint{
