@@ -69,7 +69,6 @@ message PtDisplayInfo {
     optional string network = 1;
     optional string code = 2;
     optional string headsign = 3;
-    //TODO: to be deleted after implemenation of terminus
     optional string direction = 4;
     optional string color = 5;
     optional string commercial_mode = 6;
@@ -84,7 +83,6 @@ message PtDisplayInfo {
     repeated string headsigns = 16;
     optional string text_color = 17;
     optional string trip_short_name = 19;
-    optional StopArea terminus = 20;
 }
 
 message Uris {
@@ -603,6 +601,9 @@ message Response{
     repeated VehiclePosition vehicle_positions = 76;
 
     repeated AccessPoint access_points = 77;
+
+    // Terminus for all vehicle_journeys in journeys api
+    repeated StopArea terminus = 78;
 }
 
 message NearestStopPoint{
