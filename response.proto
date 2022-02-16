@@ -23,6 +23,12 @@ message PathItem {
     optional string via_uri = 10;
 }
 
+message DynamicSpeed {
+    optional int32 base_speed = 1;
+    optional int32 traffic_speed = 2;
+    optional int32 geojson_offset = 3;
+}
+
 enum StreetNetworkMode {
     Walking = 0;
     Bike = 1;
@@ -40,6 +46,7 @@ message StreetNetwork {
     repeated PathItem path_items = 4;
     repeated GeographicalCoord coordinates = 5;
     repeated Elevation elevations = 6;
+    repeated DynamicSpeed dynamic_speeds = 7;
 }
 
 enum SectionType {
