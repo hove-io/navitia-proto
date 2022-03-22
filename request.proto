@@ -120,6 +120,7 @@ message JourneysRequest {
     optional int32 depth                                = 26 [default = 1];
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
     optional int32 arrival_transfer_penalty             = 28 [default=120]; // seconds
+    optional float asgard_use_road                      = 29 [default=0.5];
 }
 
 message PlacesNearbyRequest {
