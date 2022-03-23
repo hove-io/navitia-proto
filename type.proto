@@ -76,6 +76,13 @@ enum ResponseStatus{
     active_disruption = 10;
 }
 
+enum BicycleType {
+    Road     = 1;
+    Hybrid   = 2;
+    Cross    = 3;
+    Moutain  = 4;
+}
+
 message Code {
     required string type = 1;
     required string value = 2;

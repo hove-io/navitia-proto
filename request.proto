@@ -121,24 +121,19 @@ message JourneysRequest {
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
     optional int32 arrival_transfer_penalty             = 28 [default=120]; // seconds
     
-    // Valhalla
-    optional float use_road                             = 29 [default=0.5];
-    optional float use_hills                            = 30 [default=0.5];
-    optional float avoid_bad_surfaces                   = 31 [default=0.25];
-    optional bool shortest                              = 32 [default=false];
-    enum BicycleType {
-        Road = 1;
-        Hybrid = 2;
-        Cross = 3;
-        Moutain = 4;
-    }
-    optional BicycleType bicycle_type                   = 33 [default=Hybrid];
-    optional float use_living_streets                   = 34 [default=0.5];
-    optional float maneuver_penalty                     = 35 [default=5];
-    optional float service_penalty                      = 36 [default=0];
-    optional float service_factor                       = 37 [default=1];
-    optional float country_crossing_cost                = 38 [default=600];
-    optional float country_crossing_penalty             = 39 [default=0];
+    // Valhalla bike
+    optional float bike_use_roads                            = 29 [default=0.5];
+    optional float bike_use_hills                            = 30 [default=0.5];
+    optional float bike_use_ferry                            = 31 [default=0.5];
+    optional float bike_avoid_bad_surfaces                   = 32 [default=0.25];
+    optional bool bike_shortest                              = 33 [default=false];
+    optional BicycleType bicycle_type                        = 34 [default=Hybrid];
+    optional float bike_use_living_streets                   = 35 [default=0.5];
+    optional float bike_maneuver_penalty                     = 36 [default=5];
+    optional float bike_service_penalty                      = 37 [default=0];
+    optional float bike_service_factor                       = 38 [default=1];
+    optional float bike_country_crossing_cost                = 39 [default=600];
+    optional float bike_country_crossing_penalty             = 40 [default=0];
     
 }
 
