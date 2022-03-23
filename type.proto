@@ -77,10 +77,10 @@ enum ResponseStatus{
 }
 
 enum BicycleType {
-    Road     = 1;
-    Hybrid   = 2;
-    Cross    = 3;
-    Moutain  = 4;
+    road     = 1;
+    hybrid   = 2;
+    cross    = 3;
+    moutain  = 4;
 }
 
 message Code {

@@ -98,7 +98,7 @@ message StreetNetworkParams {
     optional float bike_use_ferry                            = 28 [default=0.5];
     optional float bike_avoid_bad_surfaces                   = 29 [default=0.25];
     optional bool bike_shortest                              = 30 [default=false];
-    optional BicycleType bicycle_type                        = 31 [default=Hybrid];
+    optional BicycleType bicycle_type                        = 31 [default=hybrid];
     optional float bike_use_living_streets                   = 32 [default=0.5];
     optional float bike_maneuver_penalty                     = 33 [default=5];
     optional float bike_service_penalty                      = 34 [default=0];
