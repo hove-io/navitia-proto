@@ -29,8 +29,8 @@ message StreetInformation {
 }
 
 message DynamicSpeed {
-    optional int32 base_speed = 1;
-    optional int32 traffic_speed = 2;
+    optional float base_speed = 1;
+    optional float traffic_speed = 2;
     optional int32 geojson_offset = 3;
 }
 
