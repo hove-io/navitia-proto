@@ -105,6 +105,7 @@ message StreetNetworkParams {
     optional float bike_service_factor                       = 35 [default=1];
     optional float bike_country_crossing_cost                = 36 [default=600];
     optional float bike_country_crossing_penalty             = 37 [default=0];
+    optional string profile_tag                              = 38 ;
 }
 
 message JourneysRequest {
@@ -134,6 +135,7 @@ message JourneysRequest {
     optional int32 depth                                = 26 [default = 1];
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
     optional int32 arrival_transfer_penalty             = 28 [default=120]; // seconds
+
 }
 
 message PlacesNearbyRequest {
@@ -197,7 +199,9 @@ message DirectPathRequest {
    optional LocationContext destination = 2;
    optional uint64 datetime = 3;
    required bool clockwise = 4;
-   optional StreetNetworkParams streetnetwork_params = 5;
+   optional StreetNetworkParams streetnetwork_params = 5; // still used by kraken
+   // Use for different streetnetwork profiles(ex bike alternatives)
+   repeated StreetNetworkParams profiles_params = 6; // used by asgard
 }
 
 message StreetNetworkRoutingMatrixRequest {
