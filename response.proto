@@ -2,6 +2,7 @@ syntax = "proto2";
 import "type.proto";
 
 package pbnavitia;
+option go_package = "./pbnavitia";
 
 enum CyclePathType {
     NoCycleLane = 0;

@@ -1,6 +1,7 @@
 syntax = "proto2";
 import "type.proto";
 package pbnavitia;
+option go_package = "./pbnavitia";
 
 message StatParameter {
     optional string key = 1;
