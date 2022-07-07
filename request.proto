@@ -107,6 +107,11 @@ message StreetNetworkParams {
     optional string profile_tag                              = 38 ;
 }
 
+enum Criteria {
+    Classic = 0;
+    Robustness = 1;
+}
+
 message JourneysRequest {
     repeated LocationContext origin                     = 1;
     repeated LocationContext destination                = 2;
@@ -133,6 +138,7 @@ message JourneysRequest {
     optional int32 depth                                = 26 [default = 1];
     optional LocationContext isochrone_center           = 27; // Needed for isochrone distributed
     optional int32 arrival_transfer_penalty             = 28 [default=120]; // seconds
+    optional Criteria criteria                          = 29;
 
 }
 
