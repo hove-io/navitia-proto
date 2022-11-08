@@ -195,6 +195,7 @@ message PTRefRequest {
 message CarCO2EmissionRequest {
    optional LocationContext origin = 1;
    optional LocationContext destination = 2;
+   optional float distance = 3;
 }
 
 message DirectPathRequest {
