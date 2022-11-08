@@ -570,6 +570,7 @@ message Network {
 message PhysicalMode {
     optional string uri = 3;
     optional string name = 4;
+    optional Co2EmissionRate co2_emission_rate = 5;
 }
 
 message CommercialMode {
@@ -730,3 +731,7 @@ message VehicleJourneyPosition {
     optional uint64 feed_created_at = 7;
 }
 
+message Co2EmissionRate {
+    optional double value = 1;
+    optional string unit = 2;
+}
