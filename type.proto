@@ -316,7 +316,7 @@ message StopPoint {
     optional string label = 15;
     repeated CommercialMode commercial_modes = 17;
     repeated PhysicalMode physical_modes = 18;
-    optional FareZone fare_zone = 19;   
+    optional FareZone fare_zone = 19;
     repeated EquipmentDetails equipment_details = 20;
     repeated Line lines = 23;
     repeated AccessPoint access_points = 24;
@@ -674,13 +674,13 @@ message PtObject {
 }
 
 message FareZone {
-    optional string name = 1;   
+    optional string name = 1;
 }
 
 message EquipmentDetails {
     enum EquipmentType {
         escalator = 1;
-        elevator = 2;    
+        elevator = 2;
     }
     optional string id = 1;
     optional string name = 2;
