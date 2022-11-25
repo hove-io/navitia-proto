@@ -455,8 +455,19 @@ message StopDateTime {
     optional RTLevel data_freshness = 7;
     optional MessageStatus departure_status = 8;
     optional MessageStatus arrival_status = 9;
+    optional OccupancyStatus departure_occupancy = 10;
 }
 
+// Based on https://gtfs.org/realtime/reference/#enum-occupancystatus
+enum OccupancyStatus {
+    EMPTY = 0;
+    MANY_SEATS_AVAILABLE = 1;
+    FEW_SEATS_AVAILABLE = 2;
+    STANDING_ROOM_ONLY = 3;
+    CRUSHED_STANDING_ROOM_ONLY = 4;
+    FULL = 5;
+    NOT_ACCEPTING_PASSENGERS = 6;
+}
 
 message StopTime {
     optional uint64 arrival_time = 1; // Local arrival
