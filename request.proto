@@ -110,6 +110,7 @@ message StreetNetworkParams {
 enum Criteria {
     Classic = 0;
     Robustness = 1;
+    Occupancy = 2;
 }
 
 message JourneysRequest {
