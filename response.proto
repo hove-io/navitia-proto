@@ -26,6 +26,7 @@ message PathItem {
 message StreetInformation {
     optional int32 geojson_offset = 1;
     optional CyclePathType cycle_path_type = 2;
+    optional double length = 3;
 }
 
 message DynamicSpeed {
