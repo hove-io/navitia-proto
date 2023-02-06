@@ -118,7 +118,7 @@ message StreetNetworkParams {
     optional float walking_use_hills                         = 47 [default=1];
     optional float walking_service_penalty                   = 48 [default=0];
     optional float walking_service_factor                    = 49 [default=1];
-    optional float walking_max_hiking_difficulty             = 50 [default=1];
+    optional int32 walking_max_hiking_difficulty             = 50 [default=1];
     optional bool  walking_shortest                          = 51 [default=false];
     optional bool  walking_ignore_oneways                    = 52 [default=true];
 }
