@@ -144,8 +144,8 @@ message PollutantValues {
 }
 
 message AirPollutants {
-    optional PollutantValues values 1;
-    optional string unit 2;
+    optional PollutantValues values = 1;
+    optional string unit = 2;
 }
 
 message Durations {
@@ -258,7 +258,7 @@ message Section {
     
     // via which Entrance/Exit
     repeated AccessPoint vias = 31;
-    optional AirPollutants air_pollutants 32;
+    optional AirPollutants air_pollutants = 32;
 }
 
 message Journey {
@@ -289,7 +289,7 @@ message Journey {
     optional uint32 nb_sections = 20;
     optional Durations durations = 21;
     optional Distances distances = 22;
-    optional AirPollutants air_pollutants 23;
+    optional AirPollutants air_pollutants = 23;
 }
 
 enum ResponseType {
@@ -630,7 +630,7 @@ message Response{
 
     // Terminus for all vehicle_journeys in journeys api
     repeated StopArea terminus = 78;
-    optional AirPollutants air_pollutants 79;
+    optional AirPollutants air_pollutants = 79;
 }
 
 message NearestStopPoint{
