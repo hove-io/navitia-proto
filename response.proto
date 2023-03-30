@@ -148,6 +148,10 @@ message AirPollutants {
     optional string unit = 2;
 }
 
+message LowEmissionZone {
+    optional bool on_path = 1;
+}
+
 message Durations {
     optional int32 total = 1;
     optional int32 walking = 2;
@@ -259,6 +263,7 @@ message Section {
     // via which Entrance/Exit
     repeated AccessPoint vias = 31;
     optional AirPollutants air_pollutants = 32;
+    optional LowEmissionZone low_emission_zone = 33;
 }
 
 message Journey {
@@ -290,6 +295,7 @@ message Journey {
     optional Durations durations = 21;
     optional Distances distances = 22;
     optional AirPollutants air_pollutants = 23;
+    optional LowEmissionZone low_emission_zone = 24;
 }
 
 enum ResponseType {
