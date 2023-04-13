@@ -281,6 +281,11 @@ message StopArea {
     repeated Line lines = 24;
 }
 
+enum AccessPointType{
+    pt_access_point = 0;
+    poi_access_point = 1;
+}
+
 message AccessPoint {
     optional string name                   = 1;
     optional string uri                    = 2;
@@ -297,6 +302,7 @@ message AccessPoint {
     optional string reversed_signposted_as = 13;
     optional StopArea parent_station       = 14;
     optional string stop_code              = 15;
+    optional AccessPointType embedded_type = 16;
 }
 
 message StopPoint {
