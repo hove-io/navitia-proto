@@ -574,6 +574,8 @@ message Poi {
     optional Address address = 11;
     repeated Code properties = 12;
     optional string label = 13;
+    // for jormungandr only
+    repeated Poi children = 14;
 }
 
 message Network {
