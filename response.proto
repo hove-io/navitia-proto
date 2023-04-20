@@ -222,6 +222,12 @@ message FeedPublisher{
     optional string license = 4;
 }
 
+enum BoardingPosition {
+    FRONT = 1;
+    MIDDLE = 2;
+    BACK = 3;
+}
+
 message Section {
     optional SectionType type = 1;
     optional PtObject origin = 2;
@@ -264,6 +270,7 @@ message Section {
     repeated AccessPoint vias = 31;
     optional AirPollutants air_pollutants = 32;
     optional LowEmissionZone low_emission_zone = 33;
+    repeated BoardingPosition best_boarding_positions = 34;
 }
 
 message Journey {
