@@ -111,6 +111,8 @@ enum Criteria {
     Classic = 0;
     Robustness = 1;
     Occupancy = 2;
+    ArrivalStopCapacity = 3;
+    DepartureStopCapacity = 4;
 }
 
 message JourneysRequest {
