@@ -288,7 +288,7 @@ message Journey {
     repeated string tags = 11; //for jormungandr only
     repeated Calendar calendars = 12;
     optional Co2Emission co2_emission = 13;
-    optional string most_serious_disruption_effect = 14;
+    optional string most_serious_disruption_effect = 14;  // actually contains the journey effect (see doc on journey status)
 
     optional string internal_id = 15;  //for jormungandr only. for log purpose we add an id to the journey
 
