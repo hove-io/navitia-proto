@@ -619,7 +619,7 @@ message Address {
     optional int32 house_number = 2;
     optional string label = 16;
     // for Jormun only
-    repeated PtObject withins = 17;
+    repeated PtObject within_zones = 17;
 }
 
 enum ExceptionType {
