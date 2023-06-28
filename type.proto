@@ -618,6 +618,8 @@ message Address {
     repeated AdministrativeRegion administrative_regions = 10;
     optional int32 house_number = 2;
     optional string label = 16;
+    // for Jormun only
+    repeated PtObject withins = 17;
 }
 
 enum ExceptionType {
