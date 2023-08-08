@@ -359,7 +359,7 @@ message PtFaresRequest {
         optional string physical_mode        = 11;
     }
     message PtJourney {
-        optional string id             = 1;
+        optional string id             = 1; // to be able to attach computed fare to journey in response.PtJourneyFare.journey_id
         repeated PtSection pt_sections = 2;
     }
     repeated PtJourney pt_journeys = 1;
