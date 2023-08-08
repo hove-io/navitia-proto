@@ -307,7 +307,7 @@ message Journey {
 }
 
 message PtJourneyFare {
-    optional string journey_id = 1;
+    optional string journey_id = 1; // linking to request.PtJourney.id from input
     optional Fare fare = 2;
 }
 
