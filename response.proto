@@ -303,6 +303,12 @@ message Journey {
     optional Distances distances = 22;
     optional AirPollutants air_pollutants = 23;
     optional LowEmissionZone low_emission_zone = 24;
+
+}
+
+message PtJourneyFare {
+    optional string journey_id = 1; // linking to request.PtJourney.id from input
+    optional Fare fare = 2;
 }
 
 enum ResponseType {
@@ -544,7 +550,7 @@ message StreetNetworkRoutingRow {
 message StreetNetworkRoutingMatrix {
     repeated StreetNetworkRoutingRow rows = 1;
 }
-message Response{
+message Response {
     optional int32 status_code = 1;
     optional Error error = 2;
     optional string info = 3;
@@ -606,7 +612,8 @@ message Response{
     repeated LineReport line_reports = 73;
 
     //Fare
-    repeated Ticket tickets = 51;
+    repeated PtJourneyFare pt_journey_fares = 80;
+    repeated Ticket tickets                = 51;
 
     //Ptobject
     repeated PtObject pt_objects = 52;

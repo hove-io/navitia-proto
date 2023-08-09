@@ -282,6 +282,7 @@ message Request {
     optional EquipmentReportsRequest equipment_reports   = 27;
     optional VehiclePositionsRequest vehicle_positions   = 28;
     optional AccessPointsRequest access_points           = 29;
+    optional PtFaresRequest pt_fares                     = 30;
 }
 
 message NearestStopPointsRequest {
@@ -342,3 +343,25 @@ message VehiclePositionsRequest {
     optional string filter          	= 4;
     repeated string forbidden_uris  	= 5;
 }
+
+
+message PtFaresRequest {
+    message PtSection {
+        optional string id                   = 1;
+        optional string network_uri          = 2;
+        optional string start_stop_area_uri  = 3;
+        optional string end_stop_area_uri    = 4;
+        optional string line_uri             = 5;
+        optional uint64 begin_date_time      = 6;
+        optional uint64 end_date_time        = 7;
+        optional string first_stop_point_uri = 9;
+        optional string last_stop_point_uri  = 10;
+        optional string physical_mode        = 11;
+    }
+    message PtJourney {
+        optional string id             = 1; // to be able to attach computed fare to journey in response.PtJourneyFare.journey_id
+        repeated PtSection pt_sections = 2;
+    }
+    repeated PtJourney pt_journeys = 1;
+}
+
