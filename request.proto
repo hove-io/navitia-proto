@@ -283,6 +283,7 @@ message Request {
     optional VehiclePositionsRequest vehicle_positions   = 28;
     optional AccessPointsRequest access_points           = 29;
     optional PtFaresRequest pt_fares                     = 30;
+    optional string language                             = 31;
 }
 
 message NearestStopPointsRequest {
