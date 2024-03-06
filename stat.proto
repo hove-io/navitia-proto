@@ -2,6 +2,31 @@ syntax = "proto2";
 import "type.proto";
 package pbnavitia;
 
+enum JourneyTag {
+    JOURNEY_TAG_UNKNOWN 		= 1;
+    JOURNEY_TAG_OLYMPICS 		= 2;
+    JOURNEY_TAG_BEST_OLYMPICS 		= 3;
+    JOURNEY_TAG_ECOLOGIC 		= 4;
+    JOURNEY_TAG_WALKING 		= 5;
+    JOURNEY_TAG_RIDESHARING 		= 6;
+    JOURNEY_TAG_BSS 			= 7;
+    JOURNEY_TAG_BIKE 			= 8;
+    JOURNEY_TAG_CAR 			= 9;
+    JOURNEY_TAG_TAXI 			= 10;
+    JOURNEY_TAG_CAR_NO_PARK 		= 11;
+    JOURNEY_TAG_BALANCED 		= 12;
+    JOURNEY_TAG_COMFORT 		= 13;
+    JOURNEY_TAG_SHORTEST 		= 14;
+    JOURNEY_TAG_RELIABLE 		= 15;
+    JOURNEY_TAG_NON_PT 			= 16;
+    JOURNEY_TAG_NON_PT_WALKING 		= 17;
+    JOURNEY_TAG_NON_PT_BIKE 		= 18;
+    JOURNEY_TAG_NON_PT_TAXI 		= 19;
+    JOURNEY_TAG_NON_PT_CAR 		= 20;
+    JOURNEY_TAG_NON_PT_CAR_NO_PARK 	= 21;
+    JOURNEY_TAG_NON_PT_RIDESHARING 	= 22;
+}
+
 message StatParameter {
     optional string key = 1;
     optional string value = 2;
@@ -88,6 +113,7 @@ message StatJourneyResponse {
     optional string     last_pt_admin_id = 17;
     optional string     last_pt_admin_name = 18;
     optional string     last_pt_admin_insee = 19;
+    repeated JourneyTag tags = 20;
 }
 
 message StatJourneySection {
