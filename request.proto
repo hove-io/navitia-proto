@@ -1,6 +1,7 @@
 syntax = "proto2";
 import "type.proto";
 package pbnavitia;
+option go_package = "./pbnavitia";
 
 message CalendarsRequest {
     optional string start_date      = 1;

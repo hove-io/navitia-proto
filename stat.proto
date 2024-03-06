@@ -1,6 +1,7 @@
 syntax = "proto2";
 import "type.proto";
 package pbnavitia;
+option go_package = "./pbnavitia";
 
 enum JourneyTag {
     JOURNEY_TAG_UNKNOWN 		= 1;
