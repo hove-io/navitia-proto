@@ -105,6 +105,7 @@ message StreetNetworkParams {
     optional float bike_country_crossing_cost                = 36 [default=600];
     optional float bike_country_crossing_penalty             = 37 [default=0];
     optional string profile_tag                              = 38 ;
+    optional float bike_destination_only_penalty             = 54 [default=120];
 
     // Valhalla walking/pedestrian
     optional float walking_walkway_factor                    = 39 [default=1.0];
@@ -121,6 +122,7 @@ message StreetNetworkParams {
     optional int32 walking_max_hiking_difficulty             = 50 [default=1];
     optional bool  walking_shortest                          = 51 [default=false];
     optional bool  walking_ignore_oneways                    = 52 [default=true];
+    optional float walking_destination_only_penalty          = 53 [default=120];
 }
 
 enum Criteria {
