@@ -24,14 +24,22 @@ message TrafficReportsRequest {
 }
 
 message LineReportsRequest {
-    optional int32 depth = 1;
-    optional int32 start_page = 2;
-    optional int32 count = 3;
-    optional string filter = 4;
-    repeated string forbidden_uris = 5;
-    optional uint64 since_datetime = 6;
-    optional uint64 until_datetime = 7;
+    enum Type {
+        COMMERCIAL_MODE = 0;
+        LINE            = 1;
+        PHYSICAL_MODE   = 2;
+        STOP_AREA       = 3;
+    }
+    optional int32 depth                = 1;
+    optional int32 start_page           = 2;
+    optional int32 count                = 3;
+    optional string filter              = 4;
+    repeated string forbidden_uris      = 5;
+    optional uint64 since_datetime      = 6;
+    optional uint64 until_datetime      = 7;
     repeated ActiveStatus filter_status = 8;
+    optional Type object_type           = 9;  // allows to filter on PT object
+    optional string object_id           = 10;
 }
 
 message PlacesRequest {
@@ -90,7 +98,7 @@ message StreetNetworkParams {
     optional float bss_rent_penalty               = 23 [default=0];
     optional float bss_return_duration            = 24 [default=120];
     optional float bss_return_penalty             = 25 [default=0];
-    
+
     // Valhalla bike
     optional float bike_use_roads                            = 26 [default=0.5];
     optional float bike_use_hills                            = 27 [default=0.5];
@@ -370,4 +378,3 @@ message PtFaresRequest {
     }
     repeated PtJourney pt_journeys = 1;
 }
-
