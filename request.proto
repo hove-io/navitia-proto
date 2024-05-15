@@ -139,6 +139,11 @@ enum Criteria {
     Occupancy = 2;
     ArrivalStopAttractivity = 3;
     DepartureStopAttractivity = 4;
+    // if datetime_represent = depature,  
+    // PseudoDuration is the duration between the requested datetime and arrvival time
+    // if datetime_represent = arrival,  
+    // PseudoDuration is the duration between the requested datetime and departure time
+    PseudoDuration = 5;
 }
 
 message JourneysRequest {
