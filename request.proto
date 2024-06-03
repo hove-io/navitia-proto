@@ -175,8 +175,9 @@ message JourneysRequest {
     optional Criteria criteria                          = 29;
     optional GeographicalCoord departure_coord          = 30;
     optional GeographicalCoord arrival_coord            = 31;
-    optional int32 max_radius_to_free_access            = 32;
-
+    optional int32 departure_max_radius_to_free_access  = 32;
+    optional int32 arrival_max_radius_to_free_access    = 33;
+    
 }
 
 message PlacesNearbyRequest {
