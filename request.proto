@@ -177,7 +177,7 @@ message JourneysRequest {
     optional GeographicalCoord arrival_coord            = 31;
     optional int32 departure_max_radius_to_free_access  = 32;
     optional int32 arrival_max_radius_to_free_access    = 33;
-    
+    optional float global_max_speed                     = 34 [default=18.0] ; // max speed among all modes of transport 
 }
 
 message PlacesNearbyRequest {
