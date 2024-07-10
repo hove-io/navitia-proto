@@ -198,6 +198,10 @@ message PlaceUriRequest {
     optional int32 depth = 2    [default = 1];
 }
 
+message PoiDisruptionRequest {
+    repeated string pois = 1;
+}
+
 message PlaceCodeRequest {
     enum Type {
         StopArea = 0;
@@ -229,7 +233,6 @@ message PTRefRequest {
 
     optional bool disable_geojson       = 12;
     optional RTLevel realtime_level     = 13;
-    repeated string pois                = 14;
 }
 
 message CarCO2EmissionRequest {
@@ -310,6 +313,7 @@ message Request {
     optional AccessPointsRequest access_points           = 29;
     optional PtFaresRequest pt_fares                     = 30;
     optional string language                             = 31;
+    optional PoiDisruptionRequest poi                    = 32;
 }
 
 message NearestStopPointsRequest {
