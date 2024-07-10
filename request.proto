@@ -229,6 +229,7 @@ message PTRefRequest {
 
     optional bool disable_geojson       = 12;
     optional RTLevel realtime_level     = 13;
+    repeated string pois                = 14;
 }
 
 message CarCO2EmissionRequest {
