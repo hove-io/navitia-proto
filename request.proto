@@ -313,7 +313,7 @@ message Request {
     optional AccessPointsRequest access_points           = 29;
     optional PtFaresRequest pt_fares                     = 30;
     optional string language                             = 31;
-    optional PoiDisruptionRequest poi                    = 32;
+    optional PoiDisruptionRequest poi_disruptions        = 32;
 }
 
 message NearestStopPointsRequest {
