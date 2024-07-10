@@ -63,6 +63,7 @@ enum API {
     vehicle_positions = 40;
     access_points = 41;
     pt_fares = 42;
+    poi_disruptions = 43;
 }
 
 enum ResponseStatus{
