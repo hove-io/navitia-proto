@@ -199,7 +199,9 @@ message PlaceUriRequest {
 }
 
 message PoiDisruptionRequest {
-    repeated string pois = 1;
+    repeated string pois      = 1;
+    required int32 start_page = 2;
+    required int32 count      = 3;
 }
 
 message PlaceCodeRequest {
