@@ -578,6 +578,7 @@ message Poi {
     optional string label = 13;
     // for jormungandr only
     repeated Poi children = 14;
+    repeated string impact_uris = 15;
 }
 
 message Network {
