@@ -199,7 +199,9 @@ message PlaceUriRequest {
 }
 
 message PoiDisruptionRequest {
-    repeated string pois = 1;
+    repeated string pois           = 1;
+    optional uint64 since_datetime = 2;
+    optional uint64 until_datetime = 3;
 }
 
 message PlaceCodeRequest {
