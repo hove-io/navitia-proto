@@ -284,7 +284,7 @@ message OdtInformation {
     optional string conditions = 3;
     optional string phone = 4;
     optional string deeplink = 5;
-    repeated AppliesOn applies_on 6;
+    repeated AppliesOn applies_on = 6;
 }
 
 message Journey {
