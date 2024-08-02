@@ -280,10 +280,11 @@ message OdtInformation {
         TO = 2;
     }
     optional string name = 1;
-    optional string conditions = 2;
-    optional string phone = 3;
-    optional string deeplink = 4;
-    repeated AppliesOn applies_on 5;
+    optional string url = 2;
+    optional string conditions = 3;
+    optional string phone = 4;
+    optional string deeplink = 5;
+    repeated AppliesOn applies_on 6;
 }
 
 message Journey {
