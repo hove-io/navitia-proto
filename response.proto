@@ -271,7 +271,7 @@ message Section {
     optional AirPollutants air_pollutants = 32;
     optional LowEmissionZone low_emission_zone = 33;
     repeated BoardingPosition best_boarding_positions = 34;
-    optional OdtInformation odt_information = 35;
+    optional OdtInformation odt_informations = 35;
 }
 
 message OdtInformation {
