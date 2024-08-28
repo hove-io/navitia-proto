@@ -271,7 +271,7 @@ message Section {
     optional AirPollutants air_pollutants = 32;
     optional LowEmissionZone low_emission_zone = 33;
     repeated BoardingPosition best_boarding_positions = 34;
-    optional OdtInformation odt_informations = 35;
+    optional OdtInformation odt_information = 35;
 }
 
 message OdtInformation {
@@ -281,7 +281,7 @@ message OdtInformation {
     }
     optional string name = 1;
     optional string url = 2;
-    optional string conditions = 3;
+    optional string condition = 3;
     optional string phone = 4;
     optional string deeplink = 5;
     repeated AppliesOn applies_on = 6;
