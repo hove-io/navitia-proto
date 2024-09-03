@@ -271,19 +271,19 @@ message Section {
     optional AirPollutants air_pollutants = 32;
     optional LowEmissionZone low_emission_zone = 33;
     repeated BoardingPosition best_boarding_positions = 34;
-    optional OdtInformation odt_information = 35;
+    optional BookingRule booking_rule = 35;
 }
 
-message OdtInformation {
+message BookingRule {
     enum AppliesOn {
         FROM = 1;
         TO = 2;
     }
     optional string name = 1;
-    optional string url = 2;
-    optional string condition = 3;
-    optional string phone = 4;
-    optional string deeplink = 5;
+    optional string info_url = 2;
+    optional string message = 3;
+    optional string phone_number = 4;
+    optional string booking_url = 5;
     repeated AppliesOn applies_on = 6;
 }
 
