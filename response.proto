@@ -271,10 +271,10 @@ message Section {
     optional AirPollutants air_pollutants = 32;
     optional LowEmissionZone low_emission_zone = 33;
     repeated BoardingPosition best_boarding_positions = 34;
-    optional BookingRules booking_rules = 35;
+    optional BookingRule booking_rule = 35;
 }
 
-message BookingRules {
+message BookingRule {
     enum AppliesOn {
         FROM = 1;
         TO = 2;
