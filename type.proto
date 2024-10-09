@@ -118,6 +118,7 @@ message Channel {
         unknown_type = 8;
         title = 9;
         beacon = 10;
+        pids = 11;
     }
     optional string id = 1;
     optional string name = 2;
