@@ -253,6 +253,7 @@ message DirectPathRequest {
    repeated StreetNetworkParams profiles_params      = 6; // used by asgard
    optional bool use_excluded_zones                  = 7 [default=false]; // used by asgard solely
    optional int32 default_projection_radius          = 8; // used by asgard solely
+   optional bool use_predicted_traffic               = 9 [default=false]; // used by asgard solely
 }
 
 message StreetNetworkRoutingMatrixRequest {
@@ -269,6 +270,7 @@ message StreetNetworkRoutingMatrixRequest {
    optional uint64 datetime                          = 11;
    optional bool use_excluded_zones                  = 12 [default=false]; // used by asgard solely
    optional int32 default_projection_radius          = 13; // used by asgard solely
+   optional bool use_predicted_traffic               = 14 [default=false]; // used by asgard solely
 }
 
 message MatchingRoute {
@@ -397,3 +399,4 @@ message PtFaresRequest {
     }
     repeated PtJourney pt_journeys = 1;
 }
+
