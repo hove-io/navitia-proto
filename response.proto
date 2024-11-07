@@ -56,6 +56,12 @@ message StreetNetwork {
     repeated StreetInformation street_information = 8;
 }
 
+enum ParkMode {
+    None = 0;
+    WithoutPark = 1;
+    WithPark = 2;
+}
+
 enum SectionType {
     PUBLIC_TRANSPORT = 1;
     STREET_NETWORK = 2;
