@@ -179,7 +179,7 @@ message JourneysRequest {
     optional GeographicalCoord departure_coord          = 31;
     optional GeographicalCoord arrival_coord            = 32;
     optional float global_max_speed                     = 33 [default=18.0]; // max speed among all modes of transport
-    optional bool _use_zonal_odt                        = 34 [default=true]; // used by Loki solely
+    optional bool use_zonal_odt                         = 34 [default=true]; // used by Loki solely
 }
 
 message PlacesNearbyRequest {
