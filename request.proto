@@ -139,11 +139,17 @@ enum Criteria {
     Occupancy = 2;
     ArrivalStopAttractivity = 3;
     DepartureStopAttractivity = 4;
-    // if datetime_represent = depature,  
+    // if datetime_represent = depature,
     // PseudoDuration is the duration between the requested datetime and arrvival time
-    // if datetime_represent = arrival,  
+    // if datetime_represent = arrival,
     // PseudoDuration is the duration between the requested datetime and departure time
     PseudoDuration = 5;
+}
+
+enum ParkMode {
+    NONE = 0;
+    OnStreet = 1;
+    ParkAndRide = 2;
 }
 
 message JourneysRequest {
@@ -175,7 +181,7 @@ message JourneysRequest {
     optional Criteria criteria                          = 29;
 
     // inputs that are used by heuristic for am optimized/faster search
-    optional bool use_heuristic                         = 30 [default=false];  
+    optional bool use_heuristic                         = 30 [default=false];
     optional GeographicalCoord departure_coord          = 31;
     optional GeographicalCoord arrival_coord            = 32;
     optional float global_max_speed                     = 33 [default=18.0]; // max speed among all modes of transport
@@ -400,4 +406,3 @@ message PtFaresRequest {
     }
     repeated PtJourney pt_journeys = 1;
 }
-

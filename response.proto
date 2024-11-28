@@ -45,11 +45,7 @@ enum StreetNetworkMode {
     Taxi = 7;
 }
 
-enum ParkMode {
-    NONE = 0;
-    OnStreet = 1;
-    ParkAndRide = 2;
-}
+
 
 message StreetNetwork {
     optional double length = 1;
