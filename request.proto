@@ -146,6 +146,12 @@ enum Criteria {
     PseudoDuration = 5;
 }
 
+enum ParkMode {
+    NONE = 0;
+    OnStreet = 1;
+    ParkAndRide = 2;
+}
+
 message JourneysRequest {
     repeated LocationContext origin                     = 1;
     repeated LocationContext destination                = 2;
