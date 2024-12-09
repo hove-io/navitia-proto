@@ -94,10 +94,10 @@ message StreetNetworkParams {
     optional bool enable_instructions             = 21 [default=true];
 
     // bike share
-    optional float bss_rent_duration              = 22 [default=120];
-    optional float bss_rent_penalty               = 23 [default=0];
-    optional float bss_return_duration            = 24 [default=120];
-    optional float bss_return_penalty             = 25 [default=0];
+    optional float bss_rent_duration              = 22 [default=120.0];
+    optional float bss_rent_penalty               = 23 [default=0.0];
+    optional float bss_return_duration            = 24 [default=120.0];
+    optional float bss_return_penalty             = 25 [default=0.0];
 
     // Valhalla bike
     optional float bike_use_roads                            = 26 [default=0.5];
@@ -107,30 +107,30 @@ message StreetNetworkParams {
     optional bool bike_shortest                              = 30 [default=false];
     optional BicycleType bicycle_type                        = 31 [default=hybrid];
     optional float bike_use_living_streets                   = 32 [default=0.5];
-    optional float bike_maneuver_penalty                     = 33 [default=5];
-    optional float bike_service_penalty                      = 34 [default=0];
-    optional float bike_service_factor                       = 35 [default=1];
-    optional float bike_country_crossing_cost                = 36 [default=600];
-    optional float bike_country_crossing_penalty             = 37 [default=0];
+    optional float bike_maneuver_penalty                     = 33 [default=5.0];
+    optional float bike_service_penalty                      = 34 [default=0.0];
+    optional float bike_service_factor                       = 35 [default=1.0];
+    optional float bike_country_crossing_cost                = 36 [default=600.0];
+    optional float bike_country_crossing_penalty             = 37 [default=0.0];
     optional string profile_tag                              = 38 ;
-    optional float bike_destination_only_penalty             = 54 [default=120];
+    optional float bike_destination_only_penalty             = 54 [default=120.0];
 
     // Valhalla walking/pedestrian
     optional float walking_walkway_factor                    = 39 [default=1.0];
     optional float walking_sidewalk_factor                   = 40 [default=1.0];
     optional float walking_alley_factor                      = 41 [default=2.0];
     optional float walking_driveway_factor                   = 42 [default=5.0];
-    optional float walking_step_penalty                      = 43 [default=30];
+    optional float walking_step_penalty                      = 43 [default=30.0];
     optional float walking_use_ferry                         = 44 [default=0.5];
     optional float walking_use_living_streets                = 45 [default=0.6];
     optional float walking_use_tracks                        = 46 [default=0.5];
-    optional float walking_use_hills                         = 47 [default=1];
-    optional float walking_service_penalty                   = 48 [default=0];
-    optional float walking_service_factor                    = 49 [default=1];
+    optional float walking_use_hills                         = 47 [default=0.5];
+    optional float walking_service_penalty                   = 48 [default=0.0];
+    optional float walking_service_factor                    = 49 [default=1.0];
     optional int32 walking_max_hiking_difficulty             = 50 [default=1];
     optional bool  walking_shortest                          = 51 [default=false];
     optional bool  walking_ignore_oneways                    = 52 [default=true];
-    optional float walking_destination_only_penalty          = 53 [default=120];
+    optional float walking_destination_only_penalty          = 53 [default=120.0];
 }
 
 enum Criteria {
