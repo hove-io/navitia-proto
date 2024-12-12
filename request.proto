@@ -186,6 +186,8 @@ message JourneysRequest {
     optional GeographicalCoord arrival_coord            = 32;
     optional float global_max_speed                     = 33 [default=18.0]; // max speed among all modes of transport
     optional int32 max_nb_crowfly                       = 34 [default=5000];
+    optional bool use_zonal_odt                         = 35 [default=false]; // used by Loki solely
+    optional int32 max_waiting_duration_odt             = 36 [default=1800]; // used by Loki solely, default 30 minutes
 }
 
 message PlacesNearbyRequest {
