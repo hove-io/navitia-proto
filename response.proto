@@ -476,6 +476,7 @@ message StopSchedule {
     optional ResponseStatus response_status = 5;
     optional ScheduleStopTime first_datetime = 6;
     optional ScheduleStopTime last_datetime = 7;
+    repeated StopArea terminus = 8;
 }
 
 
