@@ -76,20 +76,20 @@ message NextStopTimeRequest {
 message StreetNetworkParams {
     optional string origin_mode                 = 1;
     optional string destination_mode            = 2;
-    optional double walking_speed               = 3;
-    optional double bike_speed                  = 5;
-    optional double car_speed                   = 7;
-    optional double bss_speed                   = 9;
+    optional double walking_speed               = 3 [default=1.13];
+    optional double bike_speed                  = 5 [default=3.5];
+    optional double car_speed                   = 7 [default=11.11];
+    optional double bss_speed                   = 9 [default=3.5];
     optional string origin_filter               = 11;
     optional string destination_filter          = 12;
 
-    optional int32 max_walking_duration_to_pt   = 13;
-    optional int32 max_bike_duration_to_pt      = 14;
-    optional int32 max_bss_duration_to_pt       = 15;
-    optional int32 max_car_duration_to_pt       = 16;
+    optional int32 max_walking_duration_to_pt   = 13 [default=1800];
+    optional int32 max_bike_duration_to_pt      = 14 [default=1800];
+    optional int32 max_bss_duration_to_pt       = 15 [default=1800];
+    optional int32 max_car_duration_to_pt       = 16 [default=1800];
     optional bool enable_direct_path            = 17 [default=true];
 
-    optional double car_no_park_speed           = 18;
+    optional double car_no_park_speed           = 18 [default=11.11];
     optional int32 max_car_no_park_duration_to_pt = 19;
     optional string language                      = 20 [default="en-US"];
     optional bool enable_instructions             = 21 [default=true];
@@ -141,7 +141,7 @@ enum Criteria {
     ArrivalStopAttractivity = 3;
     DepartureStopAttractivity = 4;
     // if datetime_represent = depature,  
-    // PseudoDuration is the duration between the requested datetime and arrvival time
+    // PseudoDuration is the duration between the requested datetime and arrival time
     // if datetime_represent = arrival,  
     // PseudoDuration is the duration between the requested datetime and departure time
     PseudoDuration = 5;
@@ -167,8 +167,8 @@ message JourneysRequest {
     optional RTLevel realtime_level                     = 14;
     optional int32 max_extra_second_pass                = 15     [default=0];
     optional int32 walking_transfer_penalty             = 16     [default=120];
-    optional int32 direct_path_duration                 = 17;
-    optional bool bike_in_pt                            = 18;
+    optional int32 direct_path_duration                 = 17 [default=3600];
+    optional bool bike_in_pt                            = 18 [default=false];
     repeated string allowed_id                          = 19;
     optional int32 free_radius_from                     = 20 [default=0]; // meters
     optional int32 free_radius_to                       = 21 [default=0]; // meters
@@ -274,9 +274,9 @@ message StreetNetworkRoutingMatrixRequest {
    optional float speed = 4;
    optional int32 max_duration = 5;
    optional StreetNetworkParams streetnetwork_params = 6;
-   optional float asgard_max_walking_duration_coeff  = 7 [default=1];
-   optional float asgard_max_bike_duration_coeff     = 8 [default=1];
-   optional float asgard_max_bss_duration_coeff      = 9 [default=1];
+   optional float asgard_max_walking_duration_coeff  = 7 [default=1.12];
+   optional float asgard_max_bike_duration_coeff     = 8 [default=2.8];
+   optional float asgard_max_bss_duration_coeff      = 9 [default=0.46];
    optional float asgard_max_car_duration_coeff      = 10 [default=1];
    optional uint64 datetime                          = 11;
    optional bool use_excluded_zones                  = 12 [default=false]; // used by asgard solely
