@@ -1,5 +1,6 @@
 syntax = "proto2";
 package pbnavitia;
+option go_package = "gonavitia/pbnavitia";
 
 enum NavitiaType {
     LINE = 1;
