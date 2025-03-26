@@ -394,6 +394,7 @@ message ScheduleStopTime {
     optional uint64 base_date_time = 7;
     repeated string impact_uris = 8;
     optional string occupancy = 9; // occupancy status as described in https://gtfs.org/reference/realtime/v2/#enum-occupancystatus
+    optional hasEquipments has_equipments = 10;
 }
 
 message RouteScheduleRow {
