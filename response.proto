@@ -671,7 +671,7 @@ message Response {
     optional AirPollutants air_pollutants = 79;
 
     // Origin for all vehicle_journeys
-    repeated StopArea origins = 80;
+    repeated StopArea origins = 81;
 }
 
 message NearestStopPoint{
