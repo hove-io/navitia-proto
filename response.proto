@@ -97,6 +97,8 @@ message PtDisplayInfo {
     repeated string headsigns = 16;
     optional string text_color = 17;
     optional string trip_short_name = 19;
+    repeated string origins = 20; // Contains stop_area uri of all origins
+    repeated string terminus = 21; // Contains stop_area uri of all terminus
 }
 
 message Uris {
@@ -477,7 +479,6 @@ message StopSchedule {
     optional ResponseStatus response_status = 5;
     optional ScheduleStopTime first_datetime = 6;
     optional ScheduleStopTime last_datetime = 7;
-    repeated StopArea terminus = 8;
 }
 
 
@@ -668,6 +669,9 @@ message Response {
     // Terminus for all vehicle_journeys in journeys api
     repeated StopArea terminus = 78;
     optional AirPollutants air_pollutants = 79;
+
+    // Origin for all vehicle_journeys
+    repeated StopArea origins = 81;
 }
 
 message NearestStopPoint{
