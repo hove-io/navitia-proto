@@ -51,7 +51,7 @@ message StreetNetwork {
     optional StreetNetworkMode mode = 3;
     repeated PathItem path_items = 4;
     repeated GeographicalCoord coordinates = 5;
-    repeated Elevation elevations = 6;
+    repeated Elevation elevations = 6; //deprecated once all users use the /elevations API instead of street_network
     repeated DynamicSpeed dynamic_speeds = 7;
     repeated StreetInformation street_information = 8;
 }
@@ -568,6 +568,12 @@ message StreetNetworkRoutingRow {
 message StreetNetworkRoutingMatrix {
     repeated StreetNetworkRoutingRow rows = 1;
 }
+
+
+message Elevations{
+    repeated Elevation elevation = 1;
+}
+
 message Response {
     optional int32 status_code = 1;
     optional Error error = 2;
@@ -672,6 +678,9 @@ message Response {
 
     // Origin for all vehicle_journeys
     repeated StopArea origins = 81;
+     
+    // returned by asgard when asked for elevations
+    optional Elevations elevations = 82;
 }
 
 message NearestStopPoint{
@@ -689,3 +698,4 @@ message VehiclePosition {
     optional Line line = 1;
     repeated VehicleJourneyPosition vehicle_journey_positions = 2;
 }
+
