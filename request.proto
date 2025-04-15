@@ -153,6 +153,10 @@ enum ParkMode {
     ParkAndRide = 2;
 }
 
+message ElevationsRequest{
+    optional string polyline = 1; // mandatory: google-polyline encoded linestring precision 6
+}
+
 message JourneysRequest {
     repeated LocationContext origin                     = 1;
     repeated LocationContext destination                = 2;
@@ -329,6 +333,7 @@ message Request {
     optional PtFaresRequest pt_fares                     = 30;
     optional string language                             = 31;
     optional PoiDisruptionRequest poi_disruptions        = 32;
+    optional ElevationsRequest elevations_request        = 33;
 }
 
 message NearestStopPointsRequest {
