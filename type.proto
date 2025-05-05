@@ -180,6 +180,9 @@ enum StopTimeUpdateStatus {
     ADDED = 1;
     DELETED = 2;
     UNCHANGED = 3;
+    SKIPPED = 4;
+    NO_ALIGHTING = 5;
+    NO_BOARDING = 6;
 }
 
 message StopTimeUpdate {
