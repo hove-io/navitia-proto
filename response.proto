@@ -99,6 +99,7 @@ message PtDisplayInfo {
     optional string trip_short_name = 19;
     repeated string origins = 20; // Contains stop_area uri of all origins
     repeated string terminus = 21; // Contains stop_area uri of all terminus
+    optional string company = 22;
 }
 
 message Uris {
