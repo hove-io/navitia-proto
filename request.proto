@@ -193,7 +193,7 @@ message JourneysRequest {
     optional int32 max_nb_crowfly                       = 34 [default=5000];
     optional bool use_zonal_odt                         = 35 [default=false]; // used by Loki solely
     optional int32 max_waiting_duration_odt             = 36 [default=1800]; // used by Loki solely, default 30 minutes
-    optional int32 min_nb_transfers                      = 37;
+    optional int32 min_nb_transfers                     = 37;
 }
 
 message PlacesNearbyRequest {
@@ -334,6 +334,10 @@ message Request {
     optional string language                             = 31;
     optional PoiDisruptionRequest poi_disruptions        = 32;
     optional ElevationsRequest elevations_request        = 33;
+    // This field is meant to enable/disable experimental features from jormun/gormun at request scope
+    // This is to avoid creating dedicated fields in the pbf for such cases, as removing these fields
+    // when they are not needed anymore would break retrocompatibility
+    repeated string features_activation = 34;
 }
 
 message NearestStopPointsRequest {
