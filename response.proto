@@ -320,7 +320,7 @@ message Journey {
     optional Distances distances = 22;
     optional AirPollutants air_pollutants = 23;
     optional LowEmissionZone low_emission_zone = 24;
-
+    optional uint32 uncertainty = 25;
 }
 
 message PtJourneyFare {
