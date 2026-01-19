@@ -248,6 +248,7 @@ message Impact {
     optional string category                        = 19;
     repeated DisruptionProperty properties          = 20;
     repeated ApplicationPattern application_patterns = 21;
+    optional Period publication_period               = 22;
 }
 
 message GeographicalCoord {
