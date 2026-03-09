@@ -576,6 +576,11 @@ message Elevations{
     repeated Elevation elevation = 1;
 }
 
+message DirectStopPoints {
+    required string FromStopPointID      = 1;
+    repeated string AccessibleStopPoints = 2;
+}
+
 message Response {
     optional int32 status_code = 1;
     optional Error error = 2;
@@ -683,6 +688,9 @@ message Response {
      
     // returned by asgard when asked for elevations
     optional Elevations elevations = 82;
+
+    // for api direct_stop_points
+    optional DirectStopPoint direct_stop_points = 83;
 }
 
 message NearestStopPoint{

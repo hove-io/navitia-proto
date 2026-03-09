@@ -337,7 +337,8 @@ message Request {
     // This field is meant to enable/disable experimental features from jormun/gormun at request scope
     // This is to avoid creating dedicated fields in the pbf for such cases, as removing these fields
     // when they are not needed anymore would break retrocompatibility
-    repeated string features_activation = 34;
+    repeated string features_activation                  = 34;
+    optional DirectStopPointsRequest direct_stop_points  = 35;
 }
 
 message NearestStopPointsRequest {
@@ -418,5 +419,10 @@ message PtFaresRequest {
         repeated PtSection pt_sections = 2;
     }
     repeated PtJourney pt_journeys = 1;
+}
+
+message DirectStopPointsRequest {
+    required string line_id       = 1;
+    required string stop_point_id = 2;
 }
 
