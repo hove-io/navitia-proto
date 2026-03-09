@@ -690,7 +690,7 @@ message Response {
     optional Elevations elevations = 82;
 
     // for api direct_stop_points
-    optional DirectStopPoint direct_stop_points = 83;
+    optional DirectStopPoints direct_stop_points = 83;
 }
 
 message NearestStopPoint{
