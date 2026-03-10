@@ -577,8 +577,8 @@ message Elevations{
 }
 
 message DirectStopPoints {
-    required string FromStopPointID      = 1;
-    repeated string AccessibleStopPoints = 2;
+    required string from_stop_point_id     = 1;
+    repeated string accessible_stop_points = 2;
 }
 
 message Response {
