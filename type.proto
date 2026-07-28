@@ -132,6 +132,7 @@ message Channel {
 message MessageContent {
     optional string text = 1;
     optional Channel channel = 4;
+    repeated Period display_periods = 5;
 }
 
 //message are the old disruption, remove as soon as possible
