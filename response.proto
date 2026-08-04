@@ -283,12 +283,22 @@ message BookingRule {
         FROM = 1;
         TO = 2;
     }
+    enum BookingType {
+        REAL_TIME = 1;
+        SAME_DAY_WITH_PRIOR_NOTICE = 2;
+        UP_TO_PREVIOUS_DAYS = 3;
+    }
     optional string name = 1;
     optional string info_url = 2;
     optional string message = 3;
     optional string phone_number = 4;
     optional string booking_url = 5;
     repeated AppliesOn applies_on = 6;
+    optional BookingType booking_type = 7;
+    optional uint32 prior_notice_duration_min = 8;
+    optional uint32 prior_notice_duration_max = 9;
+    optional uint32 prior_notice_last_day = 10;
+    optional uint32 prior_notice_last_time = 11;
 }
 
 message Journey {
