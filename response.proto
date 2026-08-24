@@ -298,7 +298,7 @@ message BookingRule {
     optional uint32 prior_notice_duration_min = 8;
     optional uint32 prior_notice_duration_max = 9;
     optional uint32 prior_notice_last_day = 10;
-    optional string prior_notice_last_time = 11;
+    optional uint32 prior_notice_last_time = 11;
 }
 
 message Journey {
