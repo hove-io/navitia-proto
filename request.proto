@@ -339,6 +339,7 @@ message Request {
     // when they are not needed anymore would break retrocompatibility
     repeated string features_activation                  = 34;
     optional DirectStopPointsRequest direct_stop_points  = 35;
+    optional SchedulesRequest schedules                  = 36;
 }
 
 message NearestStopPointsRequest {
