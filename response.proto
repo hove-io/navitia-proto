@@ -719,3 +719,27 @@ message VehiclePosition {
     repeated VehicleJourneyPosition vehicle_journey_positions = 2;
 }
 
+
+// A schedule containing the timetable and public transport display information.
+message Schedule {
+    required ScheduleTable table = 1;
+    required PtDisplayInfo pt_display_informations = 2;
+}
+
+// A timetable containing information for StopAreas and VehicleJourneys.
+message ScheduleTable {
+    repeated ScheduleRow rows = 1;
+
+    // VehicleJourneys represented as columns in the timetable.
+    repeated VehicleJourney vehicle_journeys = 2;
+}
+
+// A row in the timetable corresponding to a StopArea. Each row contains the schedule
+// information for the StopPoints belonging to this StopArea.
+message ScheduleRow {
+    required StopArea stop_area = 1;
+
+    // The StopDateTime at each position corresponds to the VehicleJourney
+    // at the same position in ScheduleTable.vehicle_journeys.
+	repeated StopDateTime date_times = 2;
+}
