@@ -67,6 +67,7 @@ enum API {
     poi_disruptions = 43;
     elevations = 44;
     direct_stop_points = 45;
+    schedules = 46;
 }
 
 enum ResponseStatus{
