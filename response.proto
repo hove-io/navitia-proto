@@ -701,6 +701,9 @@ message Response {
 
     // for api direct_stop_points
     optional DirectStopPoints direct_stop_points = 83;
+
+    // for api schedules
+    repeated Schedule schedules = 84;
 }
 
 message NearestStopPoint{
