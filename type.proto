@@ -251,6 +251,7 @@ message Impact {
     repeated DisruptionProperty properties          = 20;
     repeated ApplicationPattern application_patterns = 21;
     optional Period publication_period               = 22;
+    optional string reference                         = 23;
 }
 
 message GeographicalCoord {
