@@ -706,7 +706,7 @@ message Response {
     repeated Schedule schedules = 84; // DEPRECATED
 
     // for api timetables
-    repeated Schedule schedules = 85;
+    repeated Timetable timetables = 85;
 }
 
 message NearestStopPoint{
