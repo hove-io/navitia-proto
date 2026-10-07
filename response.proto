@@ -703,7 +703,10 @@ message Response {
     optional DirectStopPoints direct_stop_points = 83;
 
     // for api schedules
-    repeated Schedule schedules = 84;
+    repeated Schedule schedules = 84; // DEPRECATED
+
+    // for api timetables
+    repeated Schedule schedules = 85;
 }
 
 message NearestStopPoint{
@@ -723,12 +726,14 @@ message VehiclePosition {
 }
 
 
+// DEPRECATED
 // A schedule containing the timetable and public transport display information.
 message Schedule {
     required ScheduleTable table = 1;
     required PtDisplayInfo pt_display_informations = 2;
 }
 
+// DEPRECATED
 // A timetable containing information for StopAreas and VehicleJourneys.
 message ScheduleTable {
     repeated ScheduleRow rows = 1;
@@ -737,9 +742,34 @@ message ScheduleTable {
     repeated VehicleJourney vehicle_journeys = 2;
 }
 
+// DEPRECATED
 // A row in the timetable corresponding to a StopArea. Each row contains the schedule
 // information for the StopPoints belonging to this StopArea.
 message ScheduleRow {
+    required StopArea stop_area = 1;
+
+    // The StopDateTime at each position corresponds to the VehicleJourney
+    // at the same position in ScheduleTable.vehicle_journeys.
+	repeated StopDateTime date_times = 2;
+}
+
+// A timetable containing the timetable and public transport display information.
+message Timetable {
+    required TimetableTable table = 1;
+    required PtDisplayInfo pt_display_informations = 2;
+}
+
+// A timetable containing information for StopAreas and VehicleJourneys.
+message TimetableTable {
+    repeated TimetableRow rows = 1;
+
+    // VehicleJourneys represented as columns in the timetable.
+    repeated VehicleJourney vehicle_journeys = 2;
+}
+
+// A row in the timetable corresponding to a StopArea. Each row contains the timetable
+// information for the StopPoints belonging to this StopArea.
+message TimetableRow {
     required StopArea stop_area = 1;
 
     // The StopDateTime at each position corresponds to the VehicleJourney
