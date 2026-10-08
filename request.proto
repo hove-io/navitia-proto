@@ -437,7 +437,12 @@ message SchedulesRequest {
 }
 
 message TimetablesRequest {
+    	enum GroupBy {
+		ROUTE     = 0;
+		DIRECTION = 1;
+	}
     required string line_id       = 1;
 	optional uint64 from_datetime = 2;
     optional int32 duration       = 3 [default=86400];
+    optional GroupBy group_by     = 4 [default=ROUTE];
 }
