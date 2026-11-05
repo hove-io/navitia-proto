@@ -726,31 +726,22 @@ message VehiclePosition {
 }
 
 
+message ScheduleDateTime {
+    required StopDateTime stop_date_time  = 1;
+    optional string vehicle_journey_id    = 2;
+    optional string headsign              = 3;
+    optional string trip_short_name       = 4;
+    optional hasEquipments has_equipments = 5;
+    repeated string impact_uris           = 6;
+}
+
 message Schedule {
     required PtDisplayInfo pt_display_informations = 1;
-    repeated StopDateTime date_times               = 2;
-    required string stop_area_id                   = 3;
+    repeated ScheduleDateTime date_times           = 2;
+    required StopArea stop_area                    = 3;
     optional ResponseStatus response_status        = 4;
-}
-
-// DEPRECATED
-// A timetable containing information for StopAreas and VehicleJourneys.
-message ScheduleTable {
-    repeated ScheduleRow rows = 1;
-
-    // VehicleJourneys represented as columns in the timetable.
-    repeated VehicleJourney vehicle_journeys = 2;
-}
-
-// DEPRECATED
-// A row in the timetable corresponding to a StopArea. Each row contains the schedule
-// information for the StopPoints belonging to this StopArea.
-message ScheduleRow {
-    required StopArea stop_area = 1;
-
-    // The StopDateTime at each position corresponds to the VehicleJourney
-    // at the same position in ScheduleTable.vehicle_journeys.
-	repeated StopDateTime date_times = 2;
+    optional ScheduleDateTime first_datetime       = 5;
+    optional ScheduleDateTime last_datetime        = 6;
 }
 
 // A timetable containing the timetable and public transport display information.
@@ -773,6 +764,6 @@ message TimetableRow {
     required StopArea stop_area = 1;
 
     // The StopDateTime at each position corresponds to the VehicleJourney
-    // at the same position in ScheduleTable.vehicle_journeys.
+    // at the same position in TimetableTable.vehicle_journeys.
 	repeated StopDateTime date_times = 2;
 }
