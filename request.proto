@@ -440,6 +440,7 @@ message TimetablesRequest {
     	enum GroupBy {
 		ROUTE     = 0;
 		DIRECTION = 1;
+		DIRECTION_TYPE = 2;
 	}
     required string line_id       = 1;
 	optional uint64 from_datetime = 2;
