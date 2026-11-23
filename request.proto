@@ -194,6 +194,8 @@ message JourneysRequest {
     optional bool use_zonal_odt                         = 35 [default=false]; // used by Loki solely
     optional int32 max_waiting_duration_odt             = 36 [default=1800]; // used by Loki solely, default 30 minutes
     optional int32 min_nb_transfers                     = 37;
+    repeated string preferred_id                        = 38;
+    repeated string avoided_id                          = 39;
 }
 
 message PlacesNearbyRequest {
